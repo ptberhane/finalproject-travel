@@ -1,15 +1,10 @@
-// Include the Main React Dependencies
+var React = require("react");
+var ReactDOM = require("react-dom");
+
+// Grabs the Routes
+var routes = require("./config/routes");
 
 
-// We need to include all of the components we"re utilizing
+// Renders the contents according to the route page.
 
-// Include the PageOne, PageTwo, PageThree, and PageFourth components
-
-//Routes 
-//API Calls go here ---server axios to connect
-//componentDidMouth()
-
-// Here we dump all of the components into a single main-container: MainPage
-
-// Again, treat them like they are any other HTML elements.
-  
+ReactDOM.render(routes,document.getElementById("app"));

@@ -1,56 +1,31 @@
-const path = require('path')
-
 module.exports = {
-  context: __dirname,
-  entry: './imports.js',
-  devtool: 'source-map',
+
+  // This is the entry point or start of our react applicaton
+  entry: "./app/app.js",
+
+  // The plain compiled Javascript will be output into this file
   output: {
-    publicPath: path.join(__dirname, '/public'),
-    path: path.join(__dirname, '/public'),
-    filename: 'bundle.js'
+    filename: "public/bundle.js"
   },
-  resolve: {
-    alias: {
-      react: 'preact-compat',
-      'react-dom': 'preact-compat'
-    },
-    extensions: ['.js', '.jsx', '.json']
-  },
-  stats: {
-    colors: true,
-    reasons: true,
-    chunks: false
-  },
-  devServer: {
-    publicPath: '/public/',
-    historyApiFallback: true
-  },
+
+  // This section desribes the transformations we will perform
   module: {
-    rules: [
+    loaders: [
       {
-        test: /\.json$/,
-        loader: 'json-loader'
-      },
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              url: false
-            }
-          }
-        ]
-      },
-      {
-        test: /\.js?$/,
-        loader: 'babel-loader',
-        include: [
-          path.resolve('js'),
-          path.resolve('node_modules/preact-compat/src')
-        ]
+        // Only working with files that in in a .js or .jsx extension
+        test: /\.jsx?$/,
+        // Webpack will only process files in our app folder. This avoids processing
+        // node modules and server files unnecessarily
+        include: /app/,
+        loader: "babel",
+        query: {
+          // These are the specific transformations we'll be using.
+          presets: ["react", "es2015"]
+        }
       }
     ]
-  }
-}
+  },
+  // This lets us debug our react code in chrome dev tools. Errors will have lines and file names
+  // Without this the console says all errors are coming from just coming from bundle.js
+  devtool: "eval-source-map"
+};
