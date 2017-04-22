@@ -4,7 +4,7 @@
 // Create a Schema class with mongoose
   Schema = mongoose.Schema,
   
-  var passportLocalMongoose = require('passport-local-mongoose');
+var passportLocalMongoose = require('passport-local-mongoose');
 
 var Account = new Schema({
   username: {

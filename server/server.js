@@ -45,89 +45,13 @@ passport.use(new LocalStrategy(Account.authenticate()));
 passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
-var login = require('./routes/login-routes');
+var login = require('./routes/login_routes');
 app.use('/', login);
 
 
 // Routes
 // ======
 
-// Route to see blogss we have added
-app.get("/blogs", function(req, res) {
-  // Find all notes in the note collection with our Note model
-  Note.find({}, function(error, doc) {
-    // Send any errors to the browser
-    if (error) {
-      res.send(error);
-    }
-    // Or send the doc to the browser
-    else {
-      res.send(doc);
-    }
-  });
-});
-
-// Route to see what user looks like without populating
-app.get("/user", function(req, res) {
-  // Find all users in the user collection with our User model
-  User.find({}, function(error, doc) {
-    // Send any errors to the browser
-    if (error) {
-      res.send(error);
-    }
-    // Or send the doc to the browser
-    else {
-      res.send(doc);
-    }
-  });
-});
-
-
-// New note creation via POST route
-app.post("/submit", function(req, res) {
-  // Use our Blog model to make a new note from the req.body
-  var newBlog = new Blog(req.body);
-  // Save the new note to mongoose
-  newBlog.save(function(error, doc) {
-    // Send any errors to the browser
-    if (error) {
-      res.send(error);
-    }
-    // Otherwise
-    else {
-      // Find our user and push the new blog id into the User's notes array
-      Username.findOneAndUpdate({}, { $push: { "notes": doc._id } }, { new: true }, function(err, newdoc) {
-        // Send any errors to the browser
-        if (err) {
-          res.send(err);
-        }
-        // Or send the newdoc to the browser
-        else {
-          res.send(newdoc);
-        }
-      });
-    }
-  });
-});
-
-// Route to see what user looks like WITH populating
-app.get("/populateduser", function(req, res) {
-  // Prepare a query to find all users..
-  User.find({})
-    // ..and on top of that, populate the blogs (replace the objectIds in the blogs array with bona-fide notes)
-    .populate("blogs")
-    // Now, execute the query
-    .exec(function(error, doc) {
-      // Send any errors to the browser
-      if (error) {
-        res.send(error);
-      }
-      // Or send the doc to the browser
-      else {
-        res.send(doc);
-      }
-    });
-});
 
 // Listen on Port 3000
 app.listen(3000, function() {
