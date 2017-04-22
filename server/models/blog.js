@@ -7,7 +7,7 @@ var Schema = mongoose.Schema;
 // Create a NoteSchema with the Schema class
 var NoteSchema = new Schema({
   // name: a unique String
-  name: {
+  username: {
     type: String,
     unique: true
   },
@@ -26,6 +26,7 @@ var NoteSchema = new Schema({
    },
 
   // title: a string
+  
   title: {
     type: String
   },
@@ -46,7 +47,7 @@ var NoteSchema = new Schema({
 });
 
 // Make a Note model with the NoteSchema
-var Note = mongoose.model("Note", NoteSchema);
+var Note = mongoose.model("Blog", NoteSchema);
 
 // Export the Note model
-module.exports = Note;
+module.exports = blog;
