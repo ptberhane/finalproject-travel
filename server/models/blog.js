@@ -4,8 +4,8 @@ var mongoose = require("mongoose");
 // Create a Schema class with mongoose
 var Schema = mongoose.Schema;
 
-// Create a NoteSchema with the Schema class
-var NoteSchema = new Schema({
+// Create a BlogSchema with the Schema class
+var BlogSchema = new Schema({
   // name: a unique String
   username: {
     type: String,
@@ -36,8 +36,7 @@ var NoteSchema = new Schema({
     type: String
   }
 
-  //locations
-  //add links
+  //add tag
 
   tag: {
   	type: String
@@ -46,8 +45,8 @@ var NoteSchema = new Schema({
 
 });
 
-// Make a Note model with the NoteSchema
-var Note = mongoose.model("Blog", NoteSchema);
+// Make a Blog model with the NoteSchema
+var Note = mongoose.model("Blog", BlogSchema);
 
-// Export the Note model
-module.exports = blog;
+// Export the Blog  model
+module.exports = Blog;

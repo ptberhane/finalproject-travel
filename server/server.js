@@ -26,7 +26,7 @@ app.use(logger("dev"));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/");
+mongoose.connect("mongodb://localhost/finalproject-travel");
 var db = mongoose.connection;
 
 // Show any mongoose errors
@@ -114,7 +114,7 @@ app.post("/submit", function(req, res) {
 app.get("/populateduser", function(req, res) {
   // Prepare a query to find all users..
   User.find({})
-    // ..and on top of that, populate the blogs (replace the objectIds in the notes array with bona-fide notes)
+    // ..and on top of that, populate the blogs (replace the objectIds in the blogs array with bona-fide notes)
     .populate("blogs")
     // Now, execute the query
     .exec(function(error, doc) {

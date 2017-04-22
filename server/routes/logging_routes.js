@@ -1,8 +1,11 @@
 var passport = require('passport');
 var Account = require('../models/account.js');
 var router = require('express').Router();
+
+//
 LocalStrategy = require('passport-local').Strategy;
 
+//
 router.post('/register', function (req, res, next) {
   console.log(req.body);
   Account.register(new Account({
@@ -18,6 +21,7 @@ router.post('/register', function (req, res, next) {
   });
 });
 
+//
 router.post('/login', function (req, res, next) {
   passport.authenticate('local', function (err, user, info) {
     if (err) {
@@ -36,6 +40,7 @@ router.post('/login', function (req, res, next) {
   })(req, res, next);
 });
 
+//
 router.get('/api/users/me',
   passport.authenticate('basic', { session: false }),
   function (req, res) {
@@ -45,6 +50,7 @@ router.get('/api/users/me',
     });
   });
 
+//
 router.post('/logout', function (req, res) {
   req.logout();
   res.json({});
