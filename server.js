@@ -5,6 +5,8 @@ var path = require("path");
 var logger = require("morgan")
 var mongoose = require("mongoose");
 var passport = require("passport");
+var blogRoutes = require("./server/routes/blog_routes")
+var photoRoutes = require("./server/routes/photos_routes")
 
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
@@ -35,22 +37,33 @@ db.on("error", function(error) {
 });
 
 // Once logged in to the db through mongoose, log a success message
-db.once("open", function() {
+db.once("open", function(){
   console.log("Mongoose connection successful.");
 });
 
 // Autentication 
-var Account = require('./models/account');
-passport.use(new LocalStrategy(Account.authenticate()));
-passport.serializeUser(Account.serializeUser());
-passport.deserializeUser(Account.deserializeUser());
+// var Account = require('./models/account');
+// //passport.use(new LocalStrategy(Account.authenticate()));
+// passport.serializeUser(Account.serializeUser());
+// passport.deserializeUser(Account.deserializeUser());
 
-var login = require('./routes/login_routes');
-app.use('/', login);
+// var login = require('./routes/login_routes');
+// app.use('/', login);
 
 
 // Routes
 // ======
+
+//Main "/" Route. This will readirec the user to our render React appication 
+app.get('/', function(req, res) {
+ res.sendFile(__dirname + '../public/index.html');
+});
+
+// Blogs routes. this will redirect the user to the all blogs
+app.use(blogRoutes);
+
+// Use the photo routes
+app.use(photoRoutes);
 
 
 // Listen on Port 3000

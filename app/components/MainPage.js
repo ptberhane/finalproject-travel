@@ -11,8 +11,8 @@ var Main = React.createClass({
      <div className="container">
     <nav>
     <div className ="nav-wrapper">
-      <a href="#/" class="brand-logo">Vola</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <a href="#/" className="brand-logo">Vola</a>
+      <ul id="nav-mobile" className="right hide-on-med-and-down">
         <li><a>Login</a></li>
         <li><a >Newsfeed</a></li>
       </ul>

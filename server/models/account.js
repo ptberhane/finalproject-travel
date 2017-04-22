@@ -1,9 +1,8 @@
 // Require mongoose
- mongoose = require('mongoose'),
+var mongoose = require('mongoose');
 
 // Create a Schema class with mongoose
-  Schema = mongoose.Schema,
-  
+var Schema = mongoose.Schema;
 var passportLocalMongoose = require('passport-local-mongoose');
 
 var Account = new Schema({

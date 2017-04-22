@@ -34,7 +34,7 @@ var BlogSchema = new Schema({
   // body: a string
   body: {
     type: String
-  }
+  },
 
   //add tag
 
@@ -46,7 +46,7 @@ var BlogSchema = new Schema({
 });
 
 // Make a Blog model with the NoteSchema
-var Note = mongoose.model("Blog", BlogSchema);
+var Blog = mongoose.model("Blog", BlogSchema);
 
 // Export the Blog  model
 module.exports = Blog;

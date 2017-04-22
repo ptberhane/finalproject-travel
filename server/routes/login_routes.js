@@ -3,7 +3,7 @@ var Account = require('../models/account.js');
 var router = require('express').Router();
 
 //
-LocalStrategy = require('passport-local').Strategy;
+var LocalStrategy = require('passport-local').Strategy;
 
 //
 router.post('/register', function (req, res, next) {
