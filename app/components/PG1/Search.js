@@ -5,11 +5,8 @@ var Search= React.createClass({
     render:function(){
 
             return(
-         <div className="container">
+       
 
-       <div className="row">
-
-         <div className="col-lg-12">
 
            <div className="panel panel-default">
               <div className="panel-heading">
@@ -28,11 +25,7 @@ var Search= React.createClass({
               </div>
             </div>
 
-         </div>
-
-       </div>
-
-     </div>
+ 
     );
   }
 });

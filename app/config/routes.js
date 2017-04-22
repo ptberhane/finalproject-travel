@@ -42,7 +42,7 @@ module.exports = (
       <Route path="Page4" component={Page4} />
       {/* If user selects any other path... we get the Info Route */}
      
-      <IndexRoute component={Page1}/>
+      <IndexRoute component={Page4}/>
     </Route>
   </Router>
 

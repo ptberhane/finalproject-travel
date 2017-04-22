@@ -5,9 +5,7 @@ var Photos= React.createClass({
     render:function(){
         return(
                 /*this will rending photos on page2*/
-                <div className="container">
-                <div className="row">
-                    <div className="col s12 m7">
+                
                       <div className="card">
                         <div className="card-image">
                           <img src="images/sample-1.jpg"></img>
@@ -21,9 +19,7 @@ var Photos= React.createClass({
                         </div>
 
                       </div>
-                    </div>
-                  </div>
-                  </div>
+                 
             );
     }
 

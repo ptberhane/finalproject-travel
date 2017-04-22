@@ -2,21 +2,21 @@ var React = require("react");
 var Trendinglocations= React.createClass({
     render:function(){
             return(
-         <div className="container">
+         
         <div className="row">
-          <div className="col-lg-12">
+          <div className="col l12 green">
             <div className="panel panel-default">
               <div className="panel-heading">
                 <h3 className="panel-title">Trending Locations</h3>
               </div>
             </div>
-          </div>
-        </div>
+        
+        
         <div className="row">
-          <div className="col-lg-4">
+          <div className="col l4 green lighten-2">
             <div className="panel panel-default">
               <div className="panel-heading">
-                <h3 className="panel-title">Trending Locations1</h3>
+                <h5 className="panel-title">Trending Locations1</h5>
                 {/*Image card with action options*/}  
                 <div className="card">
                     <div className="card-image waves-effect waves-block waves-light">
@@ -35,10 +35,10 @@ var Trendinglocations= React.createClass({
               </div>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col l4 green lighten-2">
             <div className="panel panel-default">
               <div className="panel-heading">
-                <h3 className="panel-title">Trending Locations2</h3>
+                <h5 className="panel-title">Trending Locations2</h5>
                  {/*Image card with action options*/}  
                 <div className="card">
                     <div className="card-image waves-effect waves-block waves-light">
@@ -57,10 +57,10 @@ var Trendinglocations= React.createClass({
               </div>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col l4 green lighten-2">
             <div className="panel panel-default">
               <div className="panel-heading">
-                <h3 className="panel-title">Trending Locations3</h3>
+                <h5 className="panel-title">Trending Locations3</h5>
                  {/*Image card with action options*/}  
                 <div className="card">
                     <div className="card-image waves-effect waves-block waves-light">
@@ -80,7 +80,9 @@ var Trendinglocations= React.createClass({
             </div>
           </div>
         </div>
-      </div>
+        </div>
+          </div>
+    
     );
   }
 });

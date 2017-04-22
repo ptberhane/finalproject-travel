@@ -5,8 +5,7 @@ var Tours= React.createClass({
     render:function(){
         return(
                 /*this will be for info on page2*/
-                <div class="row">
-                    <div class="col s12 m6">
+               
                       <div class="card blue-grey darken-1">
                         <div class="card-content white-text">
                           <span class="card-title">Tours</span>
@@ -18,8 +17,7 @@ var Tours= React.createClass({
                           <a href="#">This is a link</a>
                         </div>
                       </div>
-                    </div>
-                  </div>
+                    
             )
     }
 
