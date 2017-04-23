@@ -28,8 +28,8 @@ var helpers = {
       });
    },
 
- getCitydata: function(){
-     return axios.get("/city");
+ getCitydata: function(city){
+     return axios.get("/info/"+city);
  },
  
 };

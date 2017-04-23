@@ -38,11 +38,11 @@ module.exports = (
       {/* If user selects Info or Chat show the appropriate component */}
       <Route path="Page1" component={Page1} />
       <Route path="Page2" component={Page2} />
-      <Route path="Page3" component={Page3} />
+      <Route path="newsfeed" component={Page3} />
       <Route path="Page4" component={Page4} />
       {/* If user selects any other path... we get the Info Route */}
      
-      <IndexRoute component={Page4}/>
+      <IndexRoute component={Page1}/>
     </Route>
   </Router>
 
