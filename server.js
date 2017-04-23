@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 var path = require("path");
 var logger = require("morgan")
 var mongoose = require("mongoose");
-var passport = require("passport");
+/*var passport = require("passport");*/
 var blogRoutes = require("./server/routes/blog_routes")
 var photoRoutes = require("./server/routes/photos_routes")
 
