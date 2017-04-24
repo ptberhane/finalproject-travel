@@ -23,6 +23,10 @@ module.exports = {
           presets: ["react", "es2015"]
         }
       }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dda38bcbf3a211e5b9475d2b1d8c5804ec9216d9
     ]
   },
   // This lets us debug our react code in chrome dev tools. Errors will have lines and file names
