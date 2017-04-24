@@ -1,67 +1,43 @@
-var React = require("react");
-import { Parallax } from 'react-parallax';
 
+import React, {Component} from "react";
+class Landing extends Component {
+   constructor (props) {
+       super(props);
 
-// import Code from './assets/landing-java.js';
+       this.state = {
+           videoURL: "../public/assets/CastAway.mp4"
+       }
+   }
 
-// var Landing= React.createClass({
+   render () {
+       return (
+         <div style={styles} className="iframe">  
+           <video id="background-video"loop autoPlay >
+               <source src={this.state.videoURL} type='video/mp4'/>
+               <source src={this.state.videoURL} type='video/ogg'/>
+           </video>
+         </div>  
+       )
+   }
+};
 
-// 	render: function(){
-// 		return(
-// 			<div>
-//    				<div class="parallax-container">
-//       				<div class="parallax"><img src="../public/assets/CastAway.jpg"></img></div>
-//     			</div>
-//    			</div>
-//     );
-//   }
-// });
+const styles = {    
+   position: 'absolute',
+   top: 0,
+   left: 0,
+   zIndex: -99,
+ }
 
+// const video = {
 
-var Landing = React.createClass({
-  render: function () {
-    return (
-      <div>
+//  minWidth: '100%',
+//  maxHeight: '740px',
+//  width: 'auto',
+//  height: 'auto',
+//  padding: '-5px'
 
-	    <Parallax bgImage="../public/assets/CastAway.jpg" strength={1000}>
-		  <br/>
-		
-		</Parallax>
-      </div>
-    )
-  }
-});
-
-
-// IFRAME
-// var React = require("react");
-// var Iframe = require("iframe");
-
-
-// var Landing= React.createClass({
-
-//     render:function(){
-//         return(
-
-
-// <Iframe url="https://www.youtube.com/watch?v=8_zxVotvh8g"
-//        width="450px"
-//        height="450px"
-//        display="initial"
-//        position="relative"
-//        allowFullScreen/>
-
- 
-
-//    );
-//  }
-// });
-
-
-
-// module.exports= Landing;
-
-
-
+// }
 
 module.exports= Landing;
+
+

@@ -1,30 +1,40 @@
+import {hashHistory} from 'react-router';
+
 var React = require("react");
 
+
+
 var Search= React.createClass({
+    getInitialState() {
+      console.log('getting intiial state');
+      return {
+        search: ''
+      };
+    },
+    handleChange: function(event) {
+      this.setState({
+        search: event.target.value
+      });
+      console.log('the input box is: ' + event.target.value);
+    },
+    searchClick: function() {
+      //route to page2, with the search query
+      console.log(this.state.search);
 
-    render:function(){
+      //go to page 2
+      hashHistory.push('/Page2?city=' + this.state.search);
+    },
+    render:function() {
 
-            return(
+        return(
        
-
-
-           <div className="panel panel-default">
-              <div className="panel-heading">
-                <h3 className="panel-title">Search</h3>
-                <nav>
-                  <div className="nav-wrapper">
-                    <form>
-                      <div className="input-field">
-                        <input id="search" type="search" required></input>
-                        <label className="label-icon" for="search"><i className="material-icons">search</i></label>
-                        <i className="material-icons">close</i>
-                      </div>
-                    </form>
-                  </div>
-                </nav>
-              </div>
+           <div class="row">
+            <div class="input-field col s12">
+              <input id="search" type="text" class="validate" value={this.state.search} onChange={this.handleChange}/>
+              <label for="search" >Search</label>
+              <button onClick={this.searchClick}>Search</button>
             </div>
-
+        </div>
  
     );
   }

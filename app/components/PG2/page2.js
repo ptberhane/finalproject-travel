@@ -7,7 +7,9 @@ var Tours = require("./Tours");
 var Thingstodo = require("./Thingstodo");
 
 var Page2 = React.createClass({
-
+  componentDidMount() {
+    console.log('in page 2', this.props);
+  },
  // Here we render the function
   render: function() {
 
@@ -24,7 +26,7 @@ var Page2 = React.createClass({
        
           <div className="row">
           <div className="col l4 green">
-          <Info/>
+          <Info city={this.props.location.query.city} />
           </div>
           <div className="col l4 green">
           <Tours/>
