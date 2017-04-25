@@ -56,12 +56,16 @@ module.exports = (
 =======
       <Route path="Page1" component={Page1} />
       <Route path="Page2" component={Page2} />
-      <Route path="Page3" component={Page3} />
+      <Route path="newsfeed" component={Page3} />
       <Route path="Page4" component={Page4} />
       {/* If user selects any other path... we get the Info Route */}
      
+<<<<<<< HEAD
       <IndexRoute component={Page4}/>
 >>>>>>> dda38bcbf3a211e5b9475d2b1d8c5804ec9216d9
+=======
+      <IndexRoute component={Page1}/>
+>>>>>>> 45265dc70033c484f82eed5f923a8bb62b7afbc9
     </Route>
   </Router>
 

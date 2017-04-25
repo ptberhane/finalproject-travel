@@ -1,6 +1,9 @@
 // Include React
 var React = require("react");
 
+var Search = require("./PG1/Search");
+
+
 var Main = React.createClass({
 
  // Here we render the function
@@ -24,21 +27,25 @@ var Main = React.createClass({
 =======
      <div>
       <nav>
-      <div className="nav-wrapper">
+      <div className="nav-wrapper #eceff1 blue-grey lighten-5">
         <a href="#!" className="brand-logo">Vola</a>
         <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
         <ul className="right hide-on-med-and-down">
           <li><a href="#">Log In</a></li>
-          <li><a href="#">Newsfeed</a></li> 
+          <li><a href="#/newsfeed">Newsfeed</a></li> 
         </ul>
         <ul className="side-nav" id="mobile-demo">
           <li><a href="#">Log In</a></li>
           <li><a href="#">Newsfeed</a></li> 
         </ul>
       </div>
-  </nav>
 
+<<<<<<< HEAD
 >>>>>>> dda38bcbf3a211e5b9475d2b1d8c5804ec9216d9
+=======
+  </nav>
+    <Search/>
+>>>>>>> 45265dc70033c484f82eed5f923a8bb62b7afbc9
 
      <div className="container">
 

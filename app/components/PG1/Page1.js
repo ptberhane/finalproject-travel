@@ -3,7 +3,6 @@ var React = require("react");
 
 var Landing = require("./landing");
 var Panel = require("./Panel");
-var Search = require("./Search");
 var Trendinglocations = require("./Trendinglocations");
 
 var Page1 = React.createClass({
@@ -26,16 +25,22 @@ var Page1 = React.createClass({
   render: function() {
 
    return (
+       <div>
         <div className="row">
-        	 <div className="col l8 green">
-          <Search/>
+            <div className="col s4">
+              <Panel/>
+            </div>
+            <div>
+              <Landing />
+            </div>
           </div>
-          <div className="col l4 offset-l8 green">
-          <Panel/>
-         
+
+          <div className="container">
+            <div className="row">
+              <Trendinglocations/>
+      	     </div>
           </div>
-          <Trendinglocations/>
-      	</div>
+          </div>
           
   );
 }

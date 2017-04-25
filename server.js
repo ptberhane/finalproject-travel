@@ -7,6 +7,7 @@ var mongoose = require("mongoose");
 var passport = require("passport");
 var blogRoutes = require("./server/routes/blog_routes")
 var photoRoutes = require("./server/routes/photos_routes")
+var infoAPI = require("./server/routes/infoAPI");
 
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
@@ -64,6 +65,8 @@ app.use(blogRoutes);
 
 // Use the photo routes
 app.use(photoRoutes);
+
+app.use(infoAPI);
 
 
 // Listen on Port 3000
