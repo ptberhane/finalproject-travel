@@ -11,7 +11,7 @@ var request = require("request");
 // Initialize Express
 var app = express();
 
-//
+// Create route for the photofinder
 app.get("/photofinders/:id", function(req, res) {
   	
   	var url = 'https://api.flickr.com/services/rest/?&method=flickr.photos.search';
@@ -28,28 +28,41 @@ app.get("/photofinders/:id", function(req, res) {
    var photosUrl; 
 
     request(queryURL, function(error, response, body) {
-    	
-    	//body = JSON.parse(body);
-    	console.log(response);
+    	console.log("HELLO");
 
+//    	console.log(response.body);
+//      console.log("second");
+
+      var responseString = response.body;
+      var correctString = responseString.slice(14,-1);
+
+
+//      console.log(responseString);
+
+      body = JSON.parse(correctString);
+      //console.log(body);
+
+      var arrayOfUrls = [];
      
-    	// for (var i =0; i<body.photos.photo.length; i++){
+    	for (var i =0; i<body.photos.photo.length; i++) {
 
-     //       // Variables 	
-	    //    farmId = body.photos.photo[i].farm;
-		   // serverId = body.photos.photo[i].server;
-		   // id = body.photos.photo[i].id;
-		   // secret = body.photos.photo[i].secret;
+           // Variables 	
+  	     farmId = body.photos.photo[i].farm;
+  		   serverId = body.photos.photo[i].server;
+  		   id = body.photos.photo[i].id;
+  		   secret = body.photos.photo[i].secret;
 	       
-	    //    //https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
-	    //    photosUrl = `https://farm${farmId}.staticflickr.com/${serverId}/${id}_${secret}.jpg`;
+	       //https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
+	       photosUrl = `https://farm${farmId}.staticflickr.com/${serverId}/${id}_${secret}.jpg`;
 	 			
-	 			// //console.log the photosUrl
-	 			// console.log("photosUrl", photosUrl);
-	       
-    	// }
+	 			//console.log the photosUrl
+	 			console.log("photosUrl", photosUrl);
 
-    	res.send(response);
+        arrayOfUrls.push(photosUrl);
+	       
+    	}
+
+    	res.send(arrayOfUrls);
     });
 });
 

@@ -1,8 +1,8 @@
-// Include the axios package for performing HTTP requests (promise based alternative to request)
+//Include the axios package for performing HTTP requests (promise based alternative to request)
 var axios = require("axios");
 
 // Geocoder API
-var flickrApi = {api_key: "e1459225c0568c62f9ded2b23fb937c3"}
+var flickrApi = {}
 
 // Helper functions for making API Calls
 var helper = {
