@@ -14,13 +14,14 @@ var Page2 = React.createClass({
   render: function() {
 
    return (
-        
+        <div className="page2">
         <div className="row">
         <div className= "col l8 green">
         	<Photos/>
         </div>
         <div clasName="col l4 offset-18 green">	
           <Panel/>
+        </div>
         </div>
         
        

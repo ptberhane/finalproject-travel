@@ -26,6 +26,8 @@ var Page1 = require("../components/PG1/Page1");
 var Page2 = require("../components/PG2/Page2");
 var Page3 = require("../components/PG3/Page3");
 var Page4 = require("../components/PG4/Page4");
+var Page5 = require("../components/PG5/Page5");
+
 
 
 // Export the Routes
@@ -40,6 +42,8 @@ module.exports = (
       <Route path="Page2" component={Page2} />
       <Route path="newsfeed" component={Page3} />
       <Route path="Page4" component={Page4} />
+      <Route path="login" component={Page5} />
+
       {/* If user selects any other path... we get the Info Route */}
      
       <IndexRoute component={Page1}/>
