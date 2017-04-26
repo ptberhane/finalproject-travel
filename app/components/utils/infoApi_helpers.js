@@ -42,7 +42,5 @@ var helpers = {
  
 };
 
-
-
 // We export the helpers function (which contains getGithubInfo)
 module.exports = helpers;
