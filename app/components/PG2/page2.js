@@ -16,26 +16,27 @@ var Page2 = React.createClass({
    return (
         
         <div className="row">
-        <div className= "col l8 green">
+        <div className= "col s10 green">
         	<Photos/>
         </div>
-        <div clasName="col l4 offset-18 green">	
+        <div clasName="col s2 offset-8 green">	
           <Panel/>
         </div>
         
        
           <div className="row">
-          <div className="col l4 green">
+          <div className="col s4 green">
           <Info city={this.props.location.query.city} />
           </div>
-          <div className="col l4 green">
+          <div className="col s4 green">
           <Tours/>
           </div>
-          <div className="col l4 green">
+          <div className="col s4 green">
           <Thingstodo />
           </div>
           </div>
         </div>
+        
         
   );
 }

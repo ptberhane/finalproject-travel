@@ -27,6 +27,14 @@ var helpers = {
      return response.data.results[0].formatted;
       });
    },
+   runQuery2:function(city) {
+    var thingsTodoqueryURL = "blah"
+    return axios.get(thingsTodoqueryURL).then(function(response) {
+      console.log(response);
+     return response.data.results[0].formatted;
+       });
+   },
+
 
  getCitydata: function(city){
      return axios.get("/info/"+city);

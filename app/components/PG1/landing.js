@@ -5,7 +5,7 @@ class Landing extends Component {
        super(props);
 
        this.state = {
-           videoURL: "../public/assets/CastAway.mp4"
+           videoURL: "../assets/CastAway.mp4"
        }
    }
 
