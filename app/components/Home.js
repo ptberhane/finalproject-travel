@@ -15,14 +15,16 @@ var Home = React.createClass({
 
    return (
         <div className="row">
-        	 <div className="col l4 offset-l8 green">
+        	 <div className="col s4 offset-l8 green">
           <Panel/>
-          <div className="col l8 offset-l4 green">
+          <div className="col s8 offset-l4 green">
           <Search/>
           </div>
           </div>
       	</div>
+      <div>     
           <Trendinglocations/>
+      </div>
   );
 }
 });
