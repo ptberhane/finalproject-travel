@@ -11,7 +11,11 @@ var request = require("request");
 // Initialize Express
 var app = express();
 
+<<<<<<< HEAD
 // Create route for the photofinder
+=======
+//
+>>>>>>> 11748ce120d6efba9d4470de640a5061b6c8a43e
 app.get("/photofinders/:id", function(req, res) {
   	
   	var url = 'https://api.flickr.com/services/rest/?&method=flickr.photos.search';
@@ -19,6 +23,7 @@ app.get("/photofinders/:id", function(req, res) {
     var searchLocation = req.params.id
     var queryURL = url + "&api_key=" + api_key + "&text=" + searchLocation +"&format=json";
 
+<<<<<<< HEAD
 
    // Create variables for the url 
    var farmId;
@@ -63,6 +68,15 @@ app.get("/photofinders/:id", function(req, res) {
     	}
 
     	res.send(arrayOfUrls);
+=======
+ // "http://farm" + data.photos.photo[i].farm + ".static.flickr.com/" + data.photos.photo[i].server + "/"+data.photos.photo[i].id + "_"+data.photos.photo[i].secret + ".jpg"
+
+    request(queryURL, function(error, response, body) {
+    	// var photoInfo = body;
+    	// var farm = body.
+    	console.log("body", body);
+    	res.send(body);
+>>>>>>> 11748ce120d6efba9d4470de640a5061b6c8a43e
     });
 });
 

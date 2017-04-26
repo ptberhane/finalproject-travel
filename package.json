@@ -18,12 +18,18 @@
   "dependencies": {
     "axios": "^0.12.0",
     "body-parser": "^1.17.1",
+<<<<<<< HEAD
     "cookie-parser": "^1.4.3",
+=======
+>>>>>>> 11748ce120d6efba9d4470de640a5061b6c8a43e
     "express": "^4.15.2",
     "geocoder": "^0.2.2",
+    "history": "^4.6.1",
+    "iframe": "^1.0.0",
     "moment": "^2.18.1",
     "mongoose": "^4.4.6",
     "morgan": "^1.7.0",
+<<<<<<< HEAD
     "oauth": ">=0.9.0 <1.0.0",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
@@ -33,6 +39,15 @@
     "react-dom": "^0.14.3",
     "react-router": "^2.4.1",
     "request": "^2.81.0",
+=======
+    "passport": "^0.3.2",
+    "path": "^0.12.7",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-parallax": "^1.3.0",
+    "react-router": "^2.4.1",
+    "request": "^2.72.0",
+>>>>>>> 11748ce120d6efba9d4470de640a5061b6c8a43e
     "weather-js": "^1.0.2"
   },
   "devDependencies": {
