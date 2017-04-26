@@ -9,7 +9,7 @@ var Info= React.createClass({
     }
   },
   componentDidMount: function(){
-    console.log('compoentdidmount');
+    console.log('componentdidmount');
     console.log('this.props', this.props);
     helpers.getCitydata(this.props.city) 
     .then(function(response){
@@ -32,7 +32,7 @@ var Info= React.createClass({
                         </div>
                         <div className="card-action">
                           <a href="#">This is a link</a>
-                          <a href="#">This is a link</a>
+                      
                         </div>
                       </div>
                    

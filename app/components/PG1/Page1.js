@@ -1,6 +1,6 @@
 // Include React
 var React = require("react");
-
+var Search = require("./Search");
 var Landing = require("./landing");
 var Panel = require("./Panel");
 var Trendinglocations = require("./Trendinglocations");
@@ -27,7 +27,9 @@ var Page1 = React.createClass({
    return (
        <div>
         <div className="row">
-            <div className="col s4">
+          <Search />
+            {/*<div className="col s4 offset-s4">*/}
+            <div className="col s4 offset-l2 s10">
               <Panel/>
             </div>
             <div>
@@ -35,12 +37,12 @@ var Page1 = React.createClass({
             </div>
           </div>
 
-          <div className="container">
+          
             <div className="row">
               <Trendinglocations/>
       	     </div>
           </div>
-          </div>
+      
           
   );
 }

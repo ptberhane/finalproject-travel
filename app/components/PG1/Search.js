@@ -27,19 +27,33 @@ var Search= React.createClass({
     render:function() {
 
         return(
-       
-           <div class="row">
-            <div class="input-field col s12">
-              <input id="search" type="text" class="validate" value={this.state.search} onChange={this.handleChange}/>
-              <label for="search" >Search</label>
-              <button onClick={this.searchClick}>Search</button>
+              <div className="row">
+                <div className="input-field col s5">
+                  <input style = {styles1} id="search" type="text" className="validate" value={this.state.search} onChange={this.handleChange}/>
+                </div>
+                <div className="col s2">
+                  <button style = {styles2} onClick={this.searchClick} className="btn waves-effect waves-light " type="submit" name="action">Search
+                  <i className="material-icons right">search</i>
+
+                </button>
+                </div>
+              
             </div>
-        </div>
  
     );
   }
 });
                 /*this will render search on landing page*/
+const styles1 = {
+  margin: '25px',
+  color: 'white'
+
+}
+const styles2 = {
+  height: '30px',
+  padding: '0 0.5rem'
+}
+
 
 
 
