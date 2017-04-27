@@ -1,6 +1,23 @@
 var React = require("react");
+var photoshelpers=require('"../utils/photos-helpers.js');
+
+console.log("photos");
 
 var Photos= React.createClass({
+  getInitialState(){
+    return{
+      photos:""
+    }
+  },
+  componentDidMount: function(){
+    console.log('compoentdidmount');
+    console.log('this.props',this.props)
+    photoshelpers.getPhotos(this.props.city)
+    .then(function(response){
+      console.log(response(response.data.photos);
+        this.setState({photos:response.datat.photos})
+    }.bind(this));
+  },
 
     render:function(){
         return(

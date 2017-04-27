@@ -6,7 +6,7 @@ var Panel= React.createClass({
 		return(
 
       <div className="dropdown" >
-  <button className="grey-text text-lighten-4" className="dropbtn">Blogs</button>
+  <button className="dropbtn">Blogs</button>
   <div className="dropdown-content">
     <a href="#">Link 1</a>
     <a href="#">Link 2</a>
