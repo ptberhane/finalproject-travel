@@ -1,10 +1,18 @@
-.container {
-	width: 100%;
-	height: 100%;
-    min-height: 1000px !important;
+body{
+    padding:0;
+  margin:0;
+  width:100%;
+  overflow:auto;
+  
 }
 
-.iframe{
+.container {
+    width: 100%;
+    /*height: 100%;*/
+    /*min-height: 1000px !important;*/
+}
+
+.iframe, #display{
  position: absolute;
  top: 0;
  bottom: 0;
@@ -13,12 +21,15 @@
  overflow: hidden;
  z-index: -99;
 }
+.page2{
+    margin-top: 50px;
+}
 
 .iframe video {
  /* Make video to at least 100% wide and tall */
  min-width: 100%;
  min-height: 100%;
- 
+ margin-bottom: 100px;
  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
  width: auto;
  height: auto;
@@ -28,15 +39,27 @@
  top: 50%;
  left: 50%;
  transform: translate(-50%,-50%);
+},
+
+.container2{
+margin-top:100px;
+ min-width: 200%;
+ min-height: 100%;
+
 }
 
 /*.nav-wrapper {
-	opacity: 0.2px;
+    opacity: 0.2px;
 }*/
-
+footer{
+    position:fixed;
+    bottom:0px;
+   width:100%;
+   height:150px;
+}
 
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: grey;
     color: white;
     padding: 16px;
     font-size: 16px;
