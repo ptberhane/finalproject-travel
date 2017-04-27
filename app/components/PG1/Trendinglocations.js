@@ -100,20 +100,17 @@ var Trendinglocations= React.createClass({
     displayQuantityOfSide={2}
     navigation={false}
     >
-    <img src='https://lonelyplanetstatic.imgix.net/marketing/2017/BIT/article-images/cities/6_Pistoia_20161110_152817_watermark.jpg?q=40&auto=enhance&fit=crop&w=964&h=564&crop=bottom' alt='Pistoia, Italy' url="https://www.lonelyplanet.com/best-in-travel/cities" />
-    <img src='https://lonelyplanetstatic.imgix.net/marketing/2017/BIT/article-images/cities/2_cape_town_LPT1213_124.jpg?q=40&auto=enhance&fit=crop&w=964&h=564' alt='Cape Town, South Africa' url="https://www.lonelyplanet.com/best-in-travel/cities"/>
-    <img src='https://lonelyplanetstatic.imgix.net/marketing/2017/BIT/article-images/cities/4_merida_watermark.jpg?q=40&auto=enhance&fit=crop&w=964&h=564&crop=focalpoint&fp-x=1&fp-y=1' alt='Merida, Mexico' url="https://www.lonelyplanet.com/best-in-travel/cities"/>
+
+    <img className="locationPics" src='https://lonelyplanetstatic.imgix.net/marketing/2017/BIT/article-images/cities/6_Pistoia_20161110_152817_watermark.jpg?q=40&auto=enhance&fit=crop&w=964&h=564&crop=bottom' alt='Pistoia, Italy' url="https://www.lonelyplanet.com/best-in-travel/cities" />
+    <img className="locationPics" src='https://lonelyplanetstatic.imgix.net/marketing/2017/BIT/article-images/cities/2_cape_town_LPT1213_124.jpg?q=40&auto=enhance&fit=crop&w=964&h=564' alt='Cape Town, South Africa' url="https://www.lonelyplanet.com/best-in-travel/cities"/>
+    <img className="locationPics" src='https://lonelyplanetstatic.imgix.net/marketing/2017/BIT/article-images/cities/4_merida_watermark.jpg?q=40&auto=enhance&fit=crop&w=964&h=564&crop=focalpoint&fp-x=1&fp-y=1' alt='Merida, Mexico' url="https://www.lonelyplanet.com/best-in-travel/cities"/>
+
   </Coverflow>
 );
 }
 });
 
-// const styles={
-// width:960,
-//     height:480,
-//     displayQuantityOfSide:2,
-//     navigation:"false",
-//     enableHeading:"false"
-//   }
+
+
                 /*this will render info in trending locations on main page*/
 module.exports= Trendinglocations;

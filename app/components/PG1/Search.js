@@ -34,10 +34,8 @@ var Search= React.createClass({
                 <div className="col s2">
                   <button style = {styles2} onClick={this.searchClick} className="btn waves-effect waves-light " type="submit" name="action">Search
                   <i className="material-icons right">search</i>
-
-                </button>
-                </div>
-              
+                  </button>
+                </div>  
             </div>
  
     );
