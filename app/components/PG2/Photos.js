@@ -11,11 +11,11 @@ var Photos= React.createClass({
   },
   componentDidMount: function(){
     console.log('compoentdidmount');
-    console.log('this.props',this.props)
+    console.log('this.props',this.props);
     photoshelpers.getPhotos(this.props.city)
     .then(function(response){
       console.log(response(response.data.photos);
-        this.setState({photos:response.datat.photos})
+        this.setState({photos:response.data.photos})
     }.bind(this));
   },
 
@@ -30,7 +30,7 @@ var Photos= React.createClass({
                         </div>
                         <div className="card-content">
                         <span className="card-title">Photo Gallery</span>
-                          <p>This part will have the photos of the selected location.</p>
+                          <p>{this.state.photos}</p>
                         </div>
                         <div className="card-action">
                           <a href="#">This is a link</a>
