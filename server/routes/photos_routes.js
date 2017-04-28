@@ -28,8 +28,7 @@ app.get("/photofinders/:city", function(req, res) {
      var photosUrl; 
 
     request(queryURL, function(error, response, body) {
-      //console.log("HELLO");
-
+     
       //console.log(response.body);
       //console.log("second");
 

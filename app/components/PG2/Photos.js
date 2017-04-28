@@ -10,13 +10,20 @@ var Photos= React.createClass({
     }
   },
   componentDidMount: function(){
-    console.log('compoentdidmount');
-    console.log('this.props',this.props);
-    photoHelper.getPhotos(this.props.city)
+    // console.log('photos.js file mounted');
+    // console.log('this.props',this.props);
+
+    photoHelper.getCityPhotos(this.props.city)
     .then(function(response){
-      //console.log(response(response.data.photos);
-        this.setState({photos:response.data.photos})
+      // console.log(response.data);
+      this.setState({photos:response.data})
     }.bind(this));
+
+    // photoHelper.getCityPhotos(this.props.city)
+    // .then(function(response){
+    //   //console.log(response(response.data.photos);
+    //     this.setState({photos:response.data.photos})
+    // }.bind(this));
   },
 
     render:function(){
