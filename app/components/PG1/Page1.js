@@ -8,19 +8,6 @@ var Trendinglocations = require("./Trendinglocations");
 
 var Page1 = React.createClass({
 
- // Here we render the function
-  // render: function() {
-
-//    return (
-//         <div>
-//  		  <Landing />
-//           <Panel/>
-//           <Search/>
-//           <Trendinglocations/>
-//         </div>
-//   );
-// }
-// });
 
 // Here we render the function
   render: function() {

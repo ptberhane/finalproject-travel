@@ -97,8 +97,9 @@ var Trendinglocations= React.createClass({
  
 
   <Coverflow width="960" height="500"
-    displayQuantityOfSide={2}
+    displayQuantityOfSide={1}
     navigation={false}
+
     >
 
     <img className="locationPics" src='https://lonelyplanetstatic.imgix.net/marketing/2017/BIT/article-images/cities/6_Pistoia_20161110_152817_watermark.jpg?q=40&auto=enhance&fit=crop&w=964&h=564&crop=bottom' alt='Pistoia, Italy' url="https://www.lonelyplanet.com/best-in-travel/cities" />

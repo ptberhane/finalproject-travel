@@ -29,6 +29,7 @@ var Page4 = require("../components/PG4/Page4");
 var Page5 = require("../components/PG5/Page5");
 
 
+
 // Export the Routes
 module.exports = (
 
@@ -42,7 +43,8 @@ module.exports = (
       <Route path="newsfeed" component={Page3} />
       <Route path="Page4" component={Page4} />
        <Route path="login" component={Page5} />
-      {/* If user selects any other path... we get the Info Route */}
+       {/*<Route path="blogs" component={Page1} />*/}
+      {/* If user selects any other path... we get the Page1 Route */}
      
       <IndexRoute component={Page1}/>
     </Route>

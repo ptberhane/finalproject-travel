@@ -143,3 +143,29 @@ body{
     .sidenav a {font-size: 18px;}
 }
 
+
+.slide {
+    background: #FFFFFF;
+    position: fixed;
+    width: 10%;
+    height: 100vh;
+    top: 0;
+    z-index: 200;
+    right: 0px;
+    /* display: none; */
+/*    transform: translate(100%);*/
+    transition: all 2000ms;
+}
+
+.slide2 {
+    background: #FFFFFF;
+    position: fixed;
+    width: 40%;
+    height: 100vh;
+    top: 0;
+    z-index: 200;
+    right: 0px;
+    /* display: none; */
+/*    transform: translate(100%);*/
+    transition: all 2000ms;
+}
