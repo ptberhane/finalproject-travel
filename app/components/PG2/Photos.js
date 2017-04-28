@@ -37,7 +37,7 @@ var Photos= React.createClass({
                         </div>
                         <div className="card-content">
                         <span className="card-title">Photo Gallery</span>
-                          <p>{this.state.photos}</p>
+                          <img src={this.state.photos} alt={"this.state.photos"}/>
                         </div>
                         <div className="card-action">
                           <a href="#">This is a link</a>
