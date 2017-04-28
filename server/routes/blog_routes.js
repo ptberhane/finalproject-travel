@@ -8,7 +8,7 @@ var User = require("../models/User.js");
 
 
 // Initialize Express
-var app = express();
+var app = express(); 
 
 //Create a function to get all blogs
 function getAllBlogs(req, res) {
