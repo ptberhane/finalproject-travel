@@ -1,12 +1,12 @@
 var React = require("react");
 var photoHelper = require("../utils/photoshelpers.js");
-
+var Coverflow = require('react-coverflow');
 console.log("photos");
 
 var Photos= React.createClass({
   getInitialState(){
     return{
-      photos:""
+      photos: []
     }
   },
   componentDidMount: function(){
@@ -17,6 +17,7 @@ var Photos= React.createClass({
     .then(function(response){
       // console.log(response.data);
       this.setState({photos:response.data})
+      console.log(response.data);
     }.bind(this));
 
     // photoHelper.getCityPhotos(this.props.city)
@@ -37,7 +38,18 @@ var Photos= React.createClass({
                         </div>
                         <div className="card-content">
                         <span className="card-title">Photo Gallery</span>
-                          <img src={this.state.photos} alt={"this.state.photos"}/>
+
+                          <Coverflow width="960" height="500" displayQuantityOfSide={2} navigation={false}>
+                          {
+                            this.state.photos.map((url) =>  {
+                             return (
+                                <img className="locationPics" src={url}/>    
+                              );
+                            })
+                          }
+                          </Coverflow>
+
+                          
                         </div>
                         <div className="card-action">
                           <a href="#">This is a link</a>
