@@ -7,11 +7,7 @@ var mongoose = require("mongoose");
 var passport = require("passport");
 var blogRoutes = require("./server/routes/blog_routes")
 var photoRoutes = require("./server/routes/photos_routes")
-<<<<<<< HEAD
-=======
-var infoAPI = require("./server/routes/infoAPI");
->>>>>>> 11748ce120d6efba9d4470de640a5061b6c8a43e
-
+var infoRoutes = require("./server/routes/infoApi_routes");
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;

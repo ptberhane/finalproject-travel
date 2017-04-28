@@ -13,11 +13,11 @@ var app = express();
 
 // Create route for the photofinder
 
-app.get("/photofinders/:id", function(req, res) {
+app.get("/photofinders/:city", function(req, res) {
     
     var url = 'https://api.flickr.com/services/rest/?&method=flickr.photos.search';
     var api_key = "e1459225c0568c62f9ded2b23fb937c3";
-    var searchLocation = req.params.id
+    var searchLocation = req.params.city;
     var queryURL = url + "&api_key=" + api_key + "&text=" + searchLocation +"&format=json";
 
      // Create variables for the url 

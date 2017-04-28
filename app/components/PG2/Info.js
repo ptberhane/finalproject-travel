@@ -1,5 +1,5 @@
 var React = require("react");
-var helpers = require("../utils/helpers.js");
+var helpers = require("../utils/InfoApi_helpers.js");
 
 console.log('in info');
 var Info= React.createClass({
