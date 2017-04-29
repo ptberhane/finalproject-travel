@@ -11,6 +11,17 @@ var UserSchema = new Schema({
     type: String,
     unique: true
   },
+  // email: a string that's checked with regex to ensure it's in the expected format
+  email: {
+    type: String,
+    unique: true,
+    match: [/.+\@.+\..+/, "Please enter a valid e-mail address!"]
+  },
+  // userCreated: just the current date
+  userCreated: {
+    type: Date,
+    default: Date.now
+  },
   // notes property for the user
   blog: [{
     // Store ObjectIds in the array

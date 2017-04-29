@@ -12,13 +12,14 @@ var Account = new Schema({
   },
   password: {
   	type: String,
-  	required: "Password is Required",
-    validate: [
-      function(input) {
-        return input.length >= 6;
-      },
-      "Password should be longer."
-    ]}
+  	// required: "Password is Required",
+   //  validate: [
+   //    function(input) {
+   //      return input.length >= 6;
+   //    },
+   //    "Password should be longer."
+   //  ]
+  }
 });
 
 Account.plugin(passportLocalMongoose);

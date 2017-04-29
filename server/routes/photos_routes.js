@@ -15,10 +15,10 @@ var app = express();
 
 app.get("/photofinders/:city", function(req, res) {
     
-    var url = 'https://api.flickr.com/services/rest/?&method=flickr.photos.search';
+    var url = 'https://api.flickr.com/services/rest/?&method=flickr.photos.getPopular';
     var api_key = "e1459225c0568c62f9ded2b23fb937c3";
     var searchLocation = req.params.city;
-    var queryURL = url + "&api_key=" + api_key + "&text=" + searchLocation +"&format=json";
+    var queryURL = url + "&api_key=" + api_key + "&text=" + searchLocation + "&format=json";
 
      // Create variables for the url 
      var farmId;
@@ -46,13 +46,13 @@ app.get("/photofinders/:city", function(req, res) {
       for (var i =0; i<body.photos.photo.length; i++) {
 
            // Variables   
-           farmId = body.photos.photo[i].farm;
-           serverId = body.photos.photo[i].server;
+           farm-id = body.photos.photo[i].farm;
+           server-id = body.photos.photo[i].server;
            id = body.photos.photo[i].id;
            secret = body.photos.photo[i].secret;
          
          //Create the photosUrl using: https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
-         photosUrl = `https://farm${farmId}.staticflickr.com/${serverId}/${id}_${secret}.jpg`;
+         photosUrl = `https://farm${farm-id}.staticflickr.com/${server-id}/${id}_${secret}.jpg`;
         
          //console.log the photosUrl
          console.log("photosUrl", photosUrl);

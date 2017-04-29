@@ -59,13 +59,21 @@ app.get('/', function(req, res) {
  res.sendFile(__dirname + '../public/index.html');
 });
 
+//This will redirect to signup-form 
+app.get('/signup', function (req, res, next) {
+  res.render('signup');
+});
+
 // Blogs routes. this will redirect the user to the all blogs
 app.use(blogRoutes);
 
 // Use the photo routes
 app.use(photoRoutes);
-
+// Uses the infoRoutes
 app.use(infoRoutes);
+
+
+
 
 
 // Listen on Port 3000

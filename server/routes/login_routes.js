@@ -1,3 +1,4 @@
+// Dependencies
 var passport = require('passport');
 var Account = require('../models/account.js');
 var router = require('express').Router();
@@ -25,7 +26,7 @@ router.post('/register', function (req, res, next) {
 router.post('/login', function (req, res, next) {
   passport.authenticate('local', function (err, user, info) {
     if (err) {
-      return next(err); // will generate a 500 error
+      return next(err); 
     }
     // Generate a JSON response reflecting authentication status
     if (!user) {
