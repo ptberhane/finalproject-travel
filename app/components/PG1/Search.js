@@ -2,8 +2,6 @@ import {hashHistory} from 'react-router';
 
 var React = require("react");
 
-
-
 var Search= React.createClass({
     getInitialState() {
       console.log('getting intiial state');
@@ -20,10 +18,12 @@ var Search= React.createClass({
     searchClick: function() {
       //route to page2, with the search query
       console.log(this.state.search);
-
+console.log(this.state.search);
       //go to page 2
       hashHistory.push('/Page2?city=' + this.state.search);
+
     },
+
     render:function() {
 
         return(

@@ -11,13 +11,14 @@ var Photos= React.createClass({
   },
   componentDidMount: function(){
     // console.log('photos.js file mounted');
-    // console.log('this.props',this.props);
+    console.log('PHOTO PROPSthis.props',this.props);
 
     photoHelper.getCityPhotos(this.props.city)
     .then(function(response){
+      console.log("PHOTO RESPONSE", response);
       // console.log(response.data);
       this.setState({photos:response.data})
-      console.log(response.data);
+      console.log(response);
     }.bind(this));
 
     // photoHelper.getCityPhotos(this.props.city)
@@ -39,15 +40,18 @@ var Photos= React.createClass({
                         <div className="card-content">
                         <span className="card-title">Photo Gallery</span>
 
-                          <Coverflow width="960" height="500" displayQuantityOfSide={4} navigation={false}>
+                          <Coverflow width="960" height="500" displayQuantityOfSide={2} navigation={false}>
                           
 
-
+    
                           {
-                            this.state.photos.map((url) =>  {
+                            this.state.photos.map((url, index) =>  {
+
+
                              return (
+
                               //<li key={url.toString()}> </li>
-                                <img className="locationPics" src={url}/>    
+                                <img key={index} className="locationPics" src={url}/>    
                               );
                             })
                           }

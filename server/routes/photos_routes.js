@@ -1,69 +1,103 @@
 //api_key: "e1459225c0568c62f9ded2b23fb937c3",
-                // secret: "0cdfa647c3e3e6f1"
+// secret: "0cdfa647c3e3e6f1"
 // https://api.flickr.com/services/rest/?&method=flickr.photos.search&api_key=e1459225c0568c62f9ded2b23fb937c3&text=London&format=json
 
 // Dependencies
 var express = require("express");
-// var bodyParser = require("body-parser");
+var axios = require('axios')
 var path = require("path");
 var request = require("request");
 
 // Initialize Express
 var app = express();
 
-// Create route for the photofinder
+//create a function to get the data
+const getData = axiosRes => axiosRes.data;
+          // function pullData(response){
+          //   return  response.data
+          // }
+//create a function to remove the frikrwraper ()
+const removeFlickWrap = string => string.slice(14, -1);
+
+//create function to parse the flikr body{}
+const parseBody = string => JSON.parse(string);
+
+//create a function to get the array of photos.photo
+const getPhotoArray = jsonResponse => jsonResponse.photos.photo;
+
+//Create  for each single picture a makeUrl using: https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg 
+const makeUrl = pic => `https://farm${pic.farm}.staticflickr.com/${pic.server}/${pic.id}_${pic.secret}.jpg`;
+
+//create a function so once each picture has a makeUrl is map 
+const mapUrls = picArray => picArray.map(makeUrl); 
+
 
 app.get("/photofinders/:city", function(req, res) {
-    
-    var url = 'https://api.flickr.com/services/rest/?&method=flickr.photos.getPopular';
-    var api_key = "e1459225c0568c62f9ded2b23fb937c3";
-    var searchLocation = req.params.city;
-    var queryURL = url + "&api_key=" + api_key + "&text=" + searchLocation + "&format=json";
 
-     // Create variables for the url 
-     var farmId;
-     var serverId;
-     var id;
-     var secret;
-     var photosUrl; 
+//Send the request and sresponse to the server
+const sendJson = dataToSend=> res.json(dataToSend)
 
-    request(queryURL, function(error, response, body) {
-     
-      //console.log(response.body);
-      //console.log("second");
+    let url = `https://api.flickr.com/services/rest/?&method=flickr.photos.search`;
+    let api_key = "e1459225c0568c62f9ded2b23fb937c3";
+    let searchLocation = req.params.city;
+    //console log the location
+    console.log("search location " + searchLocation);
+    let searchURL = url + "&api_key=" + api_key + "&text=" + searchLocation + "&format=json";
 
-      var responseString = response.body;
-      var correctString = responseString.slice(14,-1);
+    // let searchURL =
+    //     `https://api.flickr.com/services/rest/?&method=flickr.photos.search&api_key=e1459225c0568c62f9ded2b23fb937c3&text=${searchLocation}&format=json`
+  
+  //Create the axios conection 
+    axios.get(searchURL)
+        .then(getData)
+        .then(removeFlickWrap)
+        .then(parseBody)
+        .then(getPhotoArray)
+        .then(mapUrls)
+        .then(sendJson)
+        .then(next => {
+            console.log('~~~~~~~~NEXT ARRAY~~~~~~~~~~~~~~~~~~')
+            
+        });
+
+    request(searchURL, function(error, response, body) {
+
+//         console.log("RESBOD", response.body);
+
+//         // var responseString = response.body;
+//         // var correctString = responseString.slice(14, -1);
 
 
-      //console.log(responseString);
+//         //console.log(responseString);
 
-      body = JSON.parse(correctString);
-      //console.log(body);
+//         body = JSON.parse(correctString);
+//         console.log("PARSEBOD", body);
 
-      var arrayOfUrls = [];
-     
-      for (var i =0; i<body.photos.photo.length; i++) {
+//         var arrayOfUrls = [];
+//         picArray= body.photos.photo;
 
-           // Variables   
-           farm-id = body.photos.photo[i].farm;
-           server-id = body.photos.photo[i].server;
-           id = body.photos.photo[i].id;
-           secret = body.photos.photo[i].secret;
-         
-         //Create the photosUrl using: https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
-         photosUrl = `https://farm${farm-id}.staticflickr.com/${server-id}/${id}_${secret}.jpg`;
-        
-         //console.log the photosUrl
-         console.log("photosUrl", photosUrl);
+//         for (var i = 0; i < picArray.length; i++) {
 
-        arrayOfUrls.push(photosUrl);
-         
-      }
+//             // Variables   
+//             farmId = picArray[i].farm;
+//             serverId = picArray[i].server;
+//             id = picArray[i].id;
+//             secret = picArray[i].secret;
 
-      res.send(arrayOfUrls);
+//             //Create the photosUrl using: https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
+//             photosUrl = `https://farm${farmId}.staticflickr.com/${serverId}/${id}_${secret}.jpg`;
+
+//             //console.log the photosUrl
+//             //console.log("photosUrl", photosUrl);
+
+//             arrayOfUrls.push(photosUrl);
+
+//         }
+// console.log(arrayOfUrls);
+//         //res.send(arrayOfUrls);
 
     });
 });
+
 
 module.exports = app

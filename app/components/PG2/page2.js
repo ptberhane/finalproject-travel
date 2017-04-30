@@ -17,7 +17,7 @@ var Page2 = React.createClass({
         
         <div className="row">
         <div className= "col s10 green">
-        	<Photos/>
+        	<Photos city={this.props.location.query.city}/>
         </div>
         <div clasName="col s2 offset-8 green">	
           <Panel/>

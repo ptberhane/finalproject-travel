@@ -6,6 +6,16 @@ var Schema = mongoose.Schema;
 
 // Create a UserSchema with the Schema class
 var UserSchema = new Schema({
+  //name
+  Name: {
+    type: String,
+    unique: true
+  },
+  //last name
+  LastName: {
+    type: String,
+    unique: true,
+  },
   // name: a unique String
   username: {
     type: String,
