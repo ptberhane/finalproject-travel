@@ -2,54 +2,50 @@ var React = require("react");
 
 var Panel= React.createClass({
 
-    getInitialState() {
-      console.log('getting intiial state');
-      return {
-        className: 'bee'
-      };
-    },
-
-  handleClick: function(){
-    console.log("CLICKED");
-    //this.setState({color: 'blue'})
-    //this.setState({className = " slide"});
-//    this.setState.className = "bob";
-    this.setState({className: 'slide2'});
-  },
-
-
-
 	render:function(){
 		return(
 
-      <div className="slide" >
-        <button className="dropbtn" onClick={this.handleClick}>Blogs</button>
-        <div className="slide" className={this.state.className}>
+      <div id="slideout" classname="#1de9b6">
+          <button className="#004d40 teal darken-1"> Blogs<i className="small material-icons">library_books</i></button>
 
-        {/*<button className="dropbtn" value = this.setState{className: "show"};>Blogs</button>
-        <div className="dropdown-content" this.setState({className: " green"})> */}
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-        </div>
-      </div>
+      <div id="slideout_inner" className="#263238 blue-grey darken-4">
+
+              <ul classname="collection">
+                <li className="collection-item avatar">
+                  <div className="white-text">
+                    <span className="title">Title of the Blog</span>
+                    <p>Username <br />
+                       Date
+                    </p>
+                  </div>
+                </li>
+                
+                <li className="collection-item avatar">
+                   <div className="white-text">
+                    <span className="title">Title of the Blog</span>
+                    <p>Username <br />
+                       Date
+                    </p>
+                  </div>
+                </li>
+
+                <li className="collection-item avatar">
+                   <div className="white-text">
+                    <span className="title">Title of the Blog</span>
+                    <p>Username <br />
+                       Date
+                    </p>
+                  </div>
+                </li>
+                
+              </ul>
+          </div>
+</div>
    
     );
   }
 });
-				/*this will be panel*/
-// const styles1 = {
-//   visibility: "hidden",
-//   opacity: "0",
-//   transition: "visibility 0s, opacity 0.5s linear"
-// }
 
-// const styles2 =  {
-//   visibility: "visible",
-//   opacity: "1"
-// }
 
 module.exports= Panel;
 
-// value={this.state.search} onChange={this.handleChange}
-// this.setState({className: " green"});

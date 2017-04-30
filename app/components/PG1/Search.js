@@ -28,8 +28,8 @@ var Search= React.createClass({
 
         return(
               <div className="row">
-                <div className="input-field col s5">
-                  <input style = {styles1} id="search" type="text" className="validate" value={this.state.search} onChange={this.handleChange}/>
+                <div className="input-field col s6">
+                  <input style = {styles1} id="search" placeholder="Search City Here" type="text" className="validate" value={this.state.search} onChange={this.handleChange}/>
                 </div>
                 <div className="col s2">
                   <button style = {styles2} onClick={this.searchClick} className="btn waves-effect waves-light " type="submit" name="action">Search
@@ -43,7 +43,7 @@ var Search= React.createClass({
 });
                 /*this will render search on landing page*/
 const styles1 = {
-  margin: '25px',
+  margin: '15px',
   color: 'white'
 
 }
@@ -51,8 +51,6 @@ const styles2 = {
   height: '30px',
   padding: '0 0.5rem'
 }
-
-
 
 
 module.exports= Search;

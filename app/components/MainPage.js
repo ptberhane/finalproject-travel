@@ -12,12 +12,10 @@ var Main = React.createClass({
    return (
 
      <div>
-      
-   
-
-     <div className="container">
+      <div className="container">
         {this.props.children}
       </div>
+      
     {/*footer begins*/}
       <footer className="page-footer teal lighten-3">
           <div className="container">

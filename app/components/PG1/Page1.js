@@ -18,11 +18,13 @@ var Page1 = React.createClass({
           <Landing />
           <Navbar />
             {/*<div className="col s4 offset-s4">*/}
+            <div claaName="row">
             <div className="col s4 offset-l2 s10">
               <Panel/>
             </div>
-            <div>
+            <div className="col s5 offset-l2 s10 center-align">
               <Search />
+              </div>
             </div>
           </div>
 
