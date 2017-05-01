@@ -5,9 +5,10 @@ var path = require("path");
 var logger = require("morgan")
 var mongoose = require("mongoose");
 var passport = require("passport");
-var blogRoutes = require("./server/routes/blog_routes")
-var photoRoutes = require("./server/routes/photos_routes")
+var blogRoutes = require("./server/routes/blog_routes");
+var photoRoutes = require("./server/routes/photos_routes");
 var infoRoutes = require("./server/routes/infoApi_routes");
+var todoRoutes = require("./server/routes/thingsTodo_routes");
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
@@ -69,8 +70,12 @@ app.use(blogRoutes);
 
 // Use the photo routes
 app.use(photoRoutes);
+
 // Uses the infoRoutes
 app.use(infoRoutes);
+
+// Use the todoRoutes
+app.use(todoRoutes);
 
 
 

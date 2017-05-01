@@ -35,7 +35,7 @@ const mapUrls = picArray => picArray.map(makeUrl);
 app.get("/photofinders/:city", function(req, res) {
 
 //Send the request and sresponse to the server
-const sendJson = dataToSend=> res.json(dataToSend)
+const sendJson = dataToSend=> res.json(dataToSend);
 
     let url = `https://api.flickr.com/services/rest/?&method=flickr.photos.search`;
     let api_key = "e1459225c0568c62f9ded2b23fb937c3";
