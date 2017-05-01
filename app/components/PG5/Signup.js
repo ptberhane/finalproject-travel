@@ -1,12 +1,11 @@
 var React = require("react");
 
-var Login= React.createClass({
+var Signup= React.createClass({
 
     render:function(){
         return(
-                /*this will render photos on page2*/
-        
-		    <div className="row" style = {styles}>
+                /*this will render sighup on page5*/
+        <div className="row" style = {styles}>
 		    <form className="col s12">
 		      <div className="row">
 		        <div className="input-field col s6">
@@ -30,16 +29,23 @@ var Login= React.createClass({
 		          <label for="email">Email</label>
 		        </div>
 		      </div> 
-		    </form>
+		      <div className="input-field col s4">
+		       <button className="btn waves-effect waves-light" type="submit" name="action">Sign up
+    				<i className="material-icons right">send</i>
+  				</button>
+    		</div> 
+	   		 </form>
 		  </div>             
-            );
-    	}
-    });
+        );
+	}
+});
 
 const styles = {
-    	background: 'white',
-    	margin: '20px'
+    	background: '#eceff1',
+    	opacity: '0.8',
+    	margin: '50px',
+    	padding: '20px'
     }
 
 
-module.exports= Login;
+module.exports= Signup;

@@ -42,9 +42,6 @@ var Main = React.createClass({
           </div>
         </footer>
     </div>
-
-
-
   );
 }
 });

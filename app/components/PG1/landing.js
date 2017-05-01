@@ -1,4 +1,3 @@
-
 import React, {Component} from "react";
 class Landing extends Component {
    constructor (props) {
@@ -27,16 +26,6 @@ const styles = {
    left: 0,
    zIndex: -99,
  }
-
-// const video = {
-
-//  minWidth: '100%',
-//  maxHeight: '740px',
-//  width: 'auto',
-//  height: 'auto',
-//  padding: '-5px'
-
-// }
 
 module.exports= Landing;
 
