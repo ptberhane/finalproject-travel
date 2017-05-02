@@ -8,7 +8,6 @@ var Trendinglocations = require("./Trendinglocations");
 
 var Page1 = React.createClass({
 
-
 // Here we render the function
   render: function() {
 
@@ -18,7 +17,8 @@ var Page1 = React.createClass({
           <Landing />
           <Navbar />
             {/*<div className="col s4 offset-s4">*/}
-            <div claaName="row">
+            <div className="row">
+            {/*<div className="col s4 offset-s4">*/}
             <div className="col s4 offset-l2 s10">
               <Panel/>
             </div>
@@ -29,7 +29,7 @@ var Page1 = React.createClass({
           </div>
 
           
-            <div className="row">
+          <div className="row">
               <Trendinglocations/>
       	     </div>
           </div>
@@ -40,5 +40,4 @@ var Page1 = React.createClass({
 });
 
 module.exports = Page1;
-
 

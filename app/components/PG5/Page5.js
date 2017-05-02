@@ -12,20 +12,21 @@ var Page5 = React.createClass({
   return (
     <div>
         <div className="row">
-         <Navbar />
+          <Navbar />
         <div className= "col s4 offset-l2 s10">
-          <Panel />
+            <Panel />
         </div>
         <div>
-        <div className="col s8">
-          <SignUp/>
-        </div>
+          <div className="col s8">
+            <SignUp/>
+          </div>
         <div>
-        <Display />
+          <Display />
         </div>
         </div>
       </div>
     </div>
+
   );
 }
 });

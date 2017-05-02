@@ -30,6 +30,7 @@ var Trendinglocations= React.createClass({
     },
 
     render:function(){
+
             return(      
  
 
@@ -43,12 +44,11 @@ var Trendinglocations= React.createClass({
     <img onClick={this.secondClick} className="locationPics" src='https://lonelyplanetstatic.imgix.net/marketing/2017/BIT/article-images/cities/2_cape_town_LPT1213_124.jpg?q=40&auto=enhance&fit=crop&w=964&h=564' alt='Cape Town, South Africa' />
     <img onClick={this.thirdClick} className="locationPics" src='https://lonelyplanetstatic.imgix.net/marketing/2017/BIT/article-images/cities/4_merida_watermark.jpg?q=40&auto=enhance&fit=crop&w=964&h=564&crop=focalpoint&fp-x=1&fp-y=1' alt='Merida, Mexico' />
 
-  </Coverflow>
-);
-}
+     </Coverflow>       
+    
+    );
+  }
 });
-
-
 
                 /*this will render info in trending locations on main page*/
 module.exports= Trendinglocations;

@@ -26,8 +26,6 @@ var Page2 = React.createClass({
               <Panel/>
             </div>
           </div>
-        
-       
           <div className="row">
             <div className="col s4 green">
               <Info city={this.props.location.query.city} />

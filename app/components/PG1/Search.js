@@ -6,7 +6,7 @@ var React = require("react");
 
 var Search= React.createClass({
     getInitialState() {
-      console.log('getting intiial state');
+      console.log('getting initial state');
       return {
         search: ''
       };

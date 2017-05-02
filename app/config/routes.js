@@ -29,8 +29,6 @@ var Page4 = require("../components/PG4/Page4");
 var Page5 = require("../components/PG5/Page5");
 var Page6 = require("../components/PG6/Page6");
 
-
-
 // Export the Routes
 module.exports = (
 
