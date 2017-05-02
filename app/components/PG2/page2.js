@@ -20,7 +20,7 @@ var Page2 = React.createClass({
           <div className="row">
               <Navbar />
             <div className= "col s8 green">
-        	   <Photos/>
+        	   <Photos city={this.props.location.query.city}/>
             </div>
             <div clasName="col s2 offset-8 green">	
               <Panel/>

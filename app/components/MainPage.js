@@ -21,7 +21,7 @@ var Main = React.createClass({
           <div className="container">
             <div className="row">
               <div className="col s6">
-                <h5 className="white-text">Footer Content</h5>
+                <h5 className="white-text">Vola</h5>
                 <p className="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
               </div>
               <div className="col s4 offset-l2 s12">
