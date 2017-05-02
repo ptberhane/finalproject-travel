@@ -5,7 +5,7 @@ var Profile= React.createClass({
     render:function(){
         return(
                 /*this will rending photos on page2*/
-                
+              
                       <div className="card">
                         <div className="card-image">
                           <img src="images/sample-1.jpg"></img>
@@ -17,8 +17,10 @@ var Profile= React.createClass({
                         <div className="card-action">
                           <a href="#">This is a link</a>
                         </div>
+                        </div>
 
-                      </div>
+                      
+
                  
             );
     }

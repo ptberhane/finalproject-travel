@@ -5,6 +5,7 @@ var Info = require("./Info");
 var Photos = require("./Photos");
 var Tours = require("./Tours");
 var Thingstodo = require("./Thingstodo");
+var Navbar = require("../PG1/Navbar");
 
 var Page2 = React.createClass({
   componentDidMount() {
@@ -15,28 +16,29 @@ var Page2 = React.createClass({
 
    return (
         <div className="page2">
-        <div className="row">
-        <div className= "col l8 green">
-        	<Photos/>
-        </div>
-        <div clasName="col l4 offset-18 green">	
-          <Panel/>
-        </div>
-        </div>
         
-       
           <div className="row">
-          <div className="col l4 green">
-          <Info city={this.props.location.query.city} />
+              <Navbar />
+            <div className= "col s8 green">
+        	   <Photos city={this.props.location.query.city}/>
+            </div>
+            <div clasName="col s2 offset-8 green">	
+              <Panel/>
+            </div>
           </div>
-          <div className="col l4 green">
-          <Tours/>
+          <div className="row">
+            <div className="col s4 green">
+              <Info city={this.props.location.query.city} />
+            </div>
+          <div className="col s4 green">
+            <Tours/>
           </div>
-          <div className="col l4 green">
-          <Thingstodo />
-          </div>
+          <div className="col s4 green">
+            <Thingstodo />
           </div>
         </div>
+      </div>
+        
         
   );
 }

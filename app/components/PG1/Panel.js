@@ -4,23 +4,44 @@ var Panel= React.createClass({
 
 	render:function(){
 		return(
+      // this will render side panel blogs ..
+      <div id="slideout" classname="teal lighten-2">
+          <button className="#004d40 teal lighten-2 white-text"> Blogs<i className="small material-icons">library_books</i></button>
+          <div id="slideout_inner" className="#263238 blue-grey darken-4">
+            <ul classname="collection">
+            <li className="collection-item avatar">
+              <div className="white-text">
+                <span className="title">Title of the Blog</span>
+                <p>Username <br />
+                   Date
+                </p>
+              </div>
+            </li>
 
-      <div className="dropdown" >
-  <button className="dropbtn">Blogs</button>
-  <div className="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
+            <li className="collection-item avatar">
+             <div className="white-text">
+              <span className="title">Title of the Blog</span>
+              <p>Username <br />
+                 Date
+              </p>
+            </div>
+            </li>
 
-            
-          
-   
+            <li className="collection-item avatar">
+               <div className="white-text">
+                <span className="title">Title of the Blog</span>
+                <p>Username <br />
+                   Date
+                </p>
+              </div>
+            </li>
+            </ul>
+          </div>
+      </div>
     );
   }
 });
-				/*this will be panel*/
 
 
 module.exports= Panel;
+

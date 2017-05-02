@@ -1,7 +1,8 @@
 var React = require("react");
-
+var Navbar = require("../PG1/Navbar");
 var Newsfeed = require("./Newsfeed");
 var Panel = require("../PG1/Panel");
+
 
 
 var Page3 = React.createClass({
@@ -10,8 +11,9 @@ var Page3 = React.createClass({
   render: function() {
 
    return (
-        <div>
-          <Panel />
+        <div className="page3">
+        <Navbar />
+        
           <Newsfeed/>
         
         </div>

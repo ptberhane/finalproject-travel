@@ -1,7 +1,8 @@
 var React = require("react");
-var helpers = require("../utils/helpers.js");
+var infoHelper  = require("../utils/InfoApi_helpers.js");
 
 console.log('in info');
+
 var Info= React.createClass({
   getInitialState() {
     return {
@@ -9,9 +10,9 @@ var Info= React.createClass({
     }
   },
   componentDidMount: function(){
-    console.log('compoentdidmount');
+    console.log('componentdidmount');
     console.log('this.props', this.props);
-    helpers.getCitydata(this.props.city) 
+    infoHelper.getCitydata(this.props.city) 
     .then(function(response){
       console.log(response.data.name);
       this.setState({name: response.data.name, climateIndex: response.data.climate_index, best_months_to_visit_text: response.data.best_months_to_visit_text})
@@ -32,7 +33,7 @@ var Info= React.createClass({
                         </div>
                         <div className="card-action">
                           <a href="#">This is a link</a>
-                          <a href="#">This is a link</a>
+                      
                         </div>
                       </div>
                    

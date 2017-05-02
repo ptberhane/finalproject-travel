@@ -2,6 +2,7 @@ var React = require("react");
 
 var Profile= require("./user-profile");
 var Panel = require("../PG1/Panel");
+var UserMap = require("./userMap");
 
 
 var Page4 = React.createClass({
@@ -13,6 +14,7 @@ var Page4 = React.createClass({
         <div>
           <Panel />
           <Profile/>
+	      <UserMap />
         
         </div>
   );

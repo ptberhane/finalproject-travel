@@ -1,11 +1,10 @@
-
 import React, {Component} from "react";
 class Landing extends Component {
    constructor (props) {
        super(props);
 
        this.state = {
-           videoURL: "../public/assets/CastAway.mp4"
+           videoURL: "../assets/CastAway.mp4"
        }
    }
 
@@ -27,16 +26,6 @@ const styles = {
    left: 0,
    zIndex: -99,
  }
-
-// const video = {
-
-//  minWidth: '100%',
-//  maxHeight: '740px',
-//  width: 'auto',
-//  height: 'auto',
-//  padding: '-5px'
-
-// }
 
 module.exports= Landing;
 

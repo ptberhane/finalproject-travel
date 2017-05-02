@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mapper</title>
+    <style type="text/css">
+        body {
+            color: #5d5d5d;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"
+            charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js" charset="utf-8"></script>
+    <script src="jquery.mapael.js" charset="utf-8"></script>
+    <script src="world_countries_mercator.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="igorStyle.css">
+
+    <script type="text/javascript">
+        $(function () {
+         var traveledMaps = new Array();
+         var sampleArray =  ["RU", "CN", "IR"];
+
+            $(".mapcontainer").mapael({
+                map: {
+                    name: "world_countries_mercator"
+                }
+            });
+
+            $(".area").on('click',function(){
+                var currentLocation = $(this).data('id');
+                $(this).toggleClass("blue");
+                
+                console.log(currentLocation);
+
+                if(traveledMaps.includes(currentLocation)) {
+                    traveledMaps.splice(currentLocation.indexOf(currentLocation),1);
+                }
+                else {
+                    traveledMaps.push(currentLocation);
+                }
+                console.log(traveledMaps);
+             });
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Click on the map to mark the country you've visited.</h1>
+
+    <div class="mapcontainer">
+        <div class="map">
+        </div>
+    </div>
+
+ 
+</div>
+</body>
+</html>

@@ -1,3 +1,4 @@
+// Dependencies
 var passport = require('passport');
 var Account = require('../models/account.js');
 var router = require('express').Router();
@@ -6,9 +7,9 @@ var router = require('express').Router();
 var LocalStrategy = require('passport-local').Strategy;
 
 //
-router.post('/register', function (req, res, next) {
+router.post('/signup', function (req, res, next) {
   console.log(req.body);
-  Account.register(new Account({
+  Account.signup(new Account({
     username: req.body.username
   }), req.body.password, function (err) {
     if (err) {
@@ -25,7 +26,7 @@ router.post('/register', function (req, res, next) {
 router.post('/login', function (req, res, next) {
   passport.authenticate('local', function (err, user, info) {
     if (err) {
-      return next(err); // will generate a 500 error
+      return next(err); 
     }
     // Generate a JSON response reflecting authentication status
     if (!user) {
