@@ -47,7 +47,7 @@ module.exports = (
       <Route path="login" component={Page6} />
       {/* If user selects any other path... we get the Page1 Route */}
      
-      <IndexRoute component={Page1}/>
+      <IndexRoute component={Page4}/>
     </Route>
   </Router>
 

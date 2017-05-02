@@ -3,12 +3,13 @@ body{
   margin:0;
   width:100%;
   overflow:auto;
+  align-content: space-between;
   
 }
 
- Coverflow {
+/*Coverflow {
     position: relative;
- }
+ }*/
 
 .container {
 	width: 100%;
@@ -76,11 +77,22 @@ body{
 nav {
     font-family: 'Arima Madurai', cursive;
     text-shadow: 2px 2px 2px #aaa;
-    margin: 20px;
+    margin: 5px;
 }
 .logo_image {
   margin-top:15px;
   width:50px;
   shape-image-threshold: 62px;
+}
+.collection {
+    margin-right: 300px;
+}
+
+.page_footer {
+    bottom: 0px;
+    margin-bottom: 0px;
+    /*width: 100%;
+    height: 150px;*/
+    position: fixed;
 }
 

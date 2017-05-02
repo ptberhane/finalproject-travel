@@ -13,7 +13,7 @@ var Page3 = React.createClass({
    return (
         <div className="page3">
         <Navbar />
-          <Panel />
+        
           <Newsfeed/>
         
         </div>

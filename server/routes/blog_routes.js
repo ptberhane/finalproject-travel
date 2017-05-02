@@ -8,7 +8,7 @@ var User = require("../models/User.js");
 
 
 // Initialize Express
-var app = express();
+var app = express(); 
 
 //Create a function to get all blogs
 function getAllBlogs(req, res) {
@@ -25,8 +25,8 @@ function getAllBlogs(req, res) {
   });
 };
 
-// Route to see blogss we have added
-app.get("/blogs", getAllBlogs);
+  // Route to see blogss we have added
+  app.get("/blogs", getAllBlogs);
 
 //get a function to get all blogs 
 function getAllUsers (req, res) {
@@ -43,11 +43,11 @@ function getAllUsers (req, res) {
   });
 };
 
-// Route to see what user looks like without populating
-app.get("/user", getAllUsers);
+  // Route to see what user looks like without populating
+  app.get("/user", getAllUsers);
 
-// New note creation via POST route
-app.post("/submit", function(req, res) {
+//crate a fuction to submit a blog  
+function submit (req,res) {
   // Use our Blog model to make a new blog from the req.body
   var newBlog = new Blog(req.body);
   // Save the new note to mongoose
@@ -71,13 +71,15 @@ app.post("/submit", function(req, res) {
       });
     }
   });
-});
+};
+  // New note creation via POST route
+  app.post("/submit", submit);
 
-// Route to see what user looks like WITH populating
-app.get("/populateduser", function(req, res) {
+//Create a function to show the user blogs 
+function populatedUser (req, res) {
   // Prepare a query to find all users..
-  User.find({})
-    // ..and on top of that, populate the blogs (replace the objectIds in the blogs array with bona-fide notes)
+    User.find({})
+    // ..and on top of that, populate the blogs (replace the objectIds in the blogs array with bona-fide blogss)
     .populate("blogs")
     // Now, execute the query
     .exec(function(error, doc) {
@@ -90,7 +92,9 @@ app.get("/populateduser", function(req, res) {
         res.send(doc);
       }
     });
-});
+};
+  // Route to see what user looks like WITH populating
+  app.get("/populateduser", populatedUser);
+
 
 module.exports = app
-

@@ -1,31 +1,15 @@
+//Include the axios package for performing HTTP requests (promise based alternative to request)
 var axios = require("axios");
 
-var flickrcode= "e1459225c0568c62f9ded2b23fb937c3";
-
-var photos= {
-
- runQuery: function(city) {
-
-   console.log(city);
-
-   //pull info from numbeo for info on page2
-   var photosqueryURL = 'https://api.flickr.com/services/rest/?&method=flickr.photos.search'+flickrcode+"&text="+city;
- 
-   return axios.get(photosqueryURL).then(function(response) {
-
-     console.log(response);
-     return response.data.results[0].formatted;
-   });
- },
+// create photoHelper so it can get city photos using axios.get()
+var photoHelper = {
    
-
- getCitydata: function(city){
-     return axios.get("/photofinders/"+city);
- },
+   getCityPhotos: function(city){
+       return axios.get("/photofinders/"+city);
+   },
  
 };
 
 
-
-// We export the helpers function (which contains getGithubInfo)
-module.exports = photoshelpers;
+// We export the photoshelpers function (which contains getGithubInfo)
+module.exports = photoHelper;

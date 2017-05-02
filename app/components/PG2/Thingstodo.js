@@ -1,5 +1,5 @@
 var React = require("react");
-var helpers = require("../utils/helpers.js");
+var helpers = require("../utils/thingstodohelper.js");
 
 var Thingstodo= React.createClass({
       getInitialState() {

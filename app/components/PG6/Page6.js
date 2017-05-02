@@ -26,9 +26,6 @@ var Page6 = React.createClass({
         </div>
       </div>
     </div>
-
-  
-
   );
 }
 });

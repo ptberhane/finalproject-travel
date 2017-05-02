@@ -4,7 +4,7 @@ var Signup= React.createClass({
 
     render:function(){
         return(
-                /*this will render sighup on page5*/
+                /*this will render signup on page5*/
         <div className="row" style = {styles}>
 		    <form className="col s12">
 		      <div className="row">
@@ -31,7 +31,7 @@ var Signup= React.createClass({
 		      </div> 
 		      <div className="input-field col s4">
 		       <button className="btn waves-effect waves-light" type="submit" name="action">Sign up
-    				<i className="material-icons right">send</i>
+    			<i className="material-icons right">send</i>
   				</button>
     		</div> 
 	   		 </form>
@@ -44,7 +44,8 @@ const styles = {
     	background: '#eceff1',
     	opacity: '0.8',
     	margin: '50px',
-    	padding: '20px'
+    	padding: '20px',
+    	fontSize: '35px'
     }
 
 

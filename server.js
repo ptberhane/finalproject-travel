@@ -5,10 +5,10 @@ var path = require("path");
 var logger = require("morgan")
 var mongoose = require("mongoose");
 var passport = require("passport");
-var blogRoutes = require("./server/routes/blog_routes")
-var photoRoutes = require("./server/routes/photos_routes")
-var infoAPI = require("./server/routes/infoAPI");
-
+var blogRoutes = require("./server/routes/blog_routes");
+var photoRoutes = require("./server/routes/photos_routes");
+var infoRoutes = require("./server/routes/infoApi_routes");
+var todoRoutes = require("./server/routes/thingsTodo_routes");
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
@@ -60,13 +60,25 @@ app.get('/', function(req, res) {
  res.sendFile(__dirname + '../public/index.html');
 });
 
+//This will redirect to signup-form 
+app.get('/signup', function (req, res, next) {
+  res.render('signup');
+});
+
 // Blogs routes. this will redirect the user to the all blogs
 app.use(blogRoutes);
 
 // Use the photo routes
 app.use(photoRoutes);
 
-app.use(infoAPI);
+// Uses the infoRoutes
+app.use(infoRoutes);
+
+// Use the todoRoutes
+app.use(todoRoutes);
+
+
+
 
 
 // Listen on Port 3000
