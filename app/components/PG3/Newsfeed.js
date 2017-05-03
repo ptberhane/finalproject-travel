@@ -15,30 +15,7 @@ var Newsfeed= React.createClass({
                       </p>
                       <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
                     </li>
-                    <li className="collection-item avatar">
-                      <i className="material-icons circle">folder</i>
-                      <span className="title">Title2</span>
-                      <p>First Line <br></br>
-                         Second Line
-                      </p>
-                      <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
-                    </li>
-                    <li className="collection-item avatar">
-                      <i className="material-icons circle green">insert_chart</i>
-                      <span className="title">Title3</span>
-                      <p>First Line <br></br>
-                         Second Line
-                      </p>
-                      <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
-                    </li>
-                    <li className="collection-item avatar">
-                      <i className="material-icons circle red">play_arrow</i>
-                      <span className="title">Title4</span>
-                      <p>First Line <br></br>
-                         Second Line
-                      </p>
-                      <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
-                    </li>
+                    
                   </ul>
             )
     }
