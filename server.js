@@ -9,7 +9,7 @@ var blogRoutes = require("./server/routes/blog_routes");
 var photoRoutes = require("./server/routes/photos_routes");
 var infoRoutes = require("./server/routes/infoApi_routes");
 var todoRoutes = require("./server/routes/thingsTodo_routes");
-var blogScrape = require("./server/routes/blogScrape");
+
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
@@ -78,8 +78,7 @@ app.use(infoRoutes);
 // Use the todoRoutes
 app.use(todoRoutes);
 
-// Use the todoRoutes
-app.use(blogScrape);
+
 
 
 
