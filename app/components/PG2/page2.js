@@ -32,7 +32,7 @@ var Page2 = React.createClass({
           <Tours/>
           </div>
           <div className="col s4 green">
-          <Thingstodo />
+          <Thingstodo city={this.props.location.query.city}/>
           </div>
           </div>
         </div>

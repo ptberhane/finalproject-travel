@@ -40,7 +40,7 @@ var Photos= React.createClass({
                         <div className="card-content">
                         <span className="card-title">Photo Gallery</span>
 
-                          <Coverflow width="960" height="500" displayQuantityOfSide={2} navigation={false}>
+                          <Coverflow width="960" height="500" displayQuantityOfSide={1} navigation={false}>
                           
 
     
