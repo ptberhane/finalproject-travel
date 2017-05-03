@@ -15,7 +15,7 @@ var Page3 = React.createClass({
         <Navbar />
         
           <Newsfeed/>
-        <br></br>
+
         
         </div>
   );

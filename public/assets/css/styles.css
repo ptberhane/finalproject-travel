@@ -22,6 +22,7 @@ body{
 }
 .page2{
     margin-top: 50px;
+
 }
 
 .iframe video {
@@ -57,12 +58,7 @@ margin-top:100px;
     transition-duration: 0.3s;
     border-radius: 0 5px 5px 0;
 }
-footer{
-    position:fixed;
-    bottom:0px;
-    width:100%;
-    height:150px;
-}
+
 
 #slideout_inner {
     position: fixed;
