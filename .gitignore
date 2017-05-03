@@ -1,5 +1,6 @@
-.gitignore
 node_modules
 /node_modules
 /public/bundle.js
 public/bundle.js
+.DS_Store
+*/.DS_Store
