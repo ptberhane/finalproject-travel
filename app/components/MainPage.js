@@ -23,9 +23,9 @@ var Main = React.createClass({
             <div className="row">
               <div className="col s6">
 
-                <h5 className="white-text">Footer Content</h5>
+                <h5 className="white-text"></h5>
 
-                <p className="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                <p className="grey-text text-lighten-4">"Travel expands the mind and fills the gap." Sheda Savage</p>
               </div>
               <div className="col s4 offset-l2 s12">
                 <h5 className="white-text">Links</h5>
