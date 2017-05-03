@@ -12,27 +12,25 @@ var Page1 = React.createClass({
   render: function() {
 
    return (
-       <div className="page1">
+      <div className="page1">
         <div className="row">
           <Landing />
-          <Navbar />
-            {/*<div className="col s4 offset-s4">*/}
+          <Navbar />            
             <div className="row">
-            {/*<div className="col s4 offset-s4">*/}
-            <div className="col s4 offset-l2 s10">
-              <Panel/>
-            </div>
-            <div className="col s5 offset-l2 s10 center-align">
-              <Search />
+              <div className="col s4 offset-l2 s10">
+                <Panel/>
+              </div>
+              <div className="col s5 offset-l2 s10 center-align">
+                <Search />
               </div>
             </div>
-          </div>
+        </div>
 
           
-          <div className="row">
-              <Trendinglocations/>
-      	     </div>
-          </div>
+        <div className="row">
+          <Trendinglocations/>
+      	 </div>
+      </div>
       
           
   );

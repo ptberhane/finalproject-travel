@@ -11,11 +11,11 @@ var Login= React.createClass({
 			      <div className="row">
 			        <div className="input-field">
 			          <input id="username" type="text" className="validate" />
-			          <label for="username">Username</label>
+			          <label htmlFor="username">Username</label>
 			        </div>
 			        <div className="input-field">
-			          <input id="password" type="password" class="validate" />
-			          <label for="password">Password</label>
+			          <input id="password" type="password" className="validate" />
+			          <label htmlFor="password">Password</label>
 			        </div>
 			      	<div className="input-field">
 			       		<button className="btn waves-effect waves-light" type="submit" name="action">Login
