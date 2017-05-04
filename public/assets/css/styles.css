@@ -20,10 +20,6 @@ body{
  overflow: hidden;
  z-index: -99;
 }
-.page2{
-    margin-top: 50px;
-
-}
 
 .iframe video {
  /* Make video to at least 100% wide and tall */
@@ -84,6 +80,7 @@ nav {
     font-family: 'Arima Madurai', cursive;
     text-shadow: 2px 2px 2px #aaa;
     margin: 5px;
+    border-bottom-style:5px solid red;
 }
 .logo_image {
   margin-top:15px;

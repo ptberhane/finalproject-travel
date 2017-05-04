@@ -6,34 +6,32 @@ var Photos = require("./Photos");
 var Tours = require("./Tours");
 var Thingstodo = require("./Thingstodo");
 var Navbar = require("../PG1/Navbar");
+var Search = require("../PG1/Search");
 
 var Page2 = React.createClass({
-  componentDidMount() {
-    console.log('in page 2', this.props);
-  },
- // Here we render the function
+
   render: function() {
 
    return (
         <div className="page2">
-        
           <div className="row">
               <Navbar />
-            <div className= "col s8 green">
+              <Search />
+            <div className= "col s12">
         	   <Photos city={this.props.location.query.city}/>
             </div>
-            <div clasName="col s2 offset-8 green">	
+            <div className="col s4 offset-l2 s10">	
               <Panel/>
             </div>
           </div>
           <div className="row">
-            <div className="col s4 green">
+            <div className="col s4">
               <Info city={this.props.location.query.city} />
             </div>
-          <div className="col s4 green">
+          <div className="col s4">
             <Tours/>
           </div>
-          <div className="col s4 green">
+          <div className="col s4">
             <Thingstodo />
           </div>
         </div>

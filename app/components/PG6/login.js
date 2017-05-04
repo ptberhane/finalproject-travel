@@ -24,15 +24,15 @@ var Login= React.createClass({
 			      	</div>   
 		      	</div> 
 		      	<div className="row">
-        		<div className="col s10" style={styles1}>
-        				 Not registered? Sign up:
-          		<div className="input-field inline">
-           	<button className="btn waves-effect waves-light" type="submit" name="action">Signup
-    				<i className="material-icons right">mode_edit</i>
-  				</button>
-          </div>
-        </div>	
-        </div>
+            		<div className="col s10" style={styles1}>
+    				    Not registered? Sign up:
+                  		<div className="input-field inline">
+                   	        <button className="btn waves-effect waves-light" type="submit" name="action">Signup
+            				<i className="material-icons right">mode_edit</i>
+          				      </button>
+                        </div>
+                    </div>	
+                </div>
 			    </form>
 		    </div>             
             );
@@ -49,7 +49,7 @@ const styles = {
     }
 
 const styles1 = {
-	fontSize: '18px'
+	fontSize: '15px'
 }
     
 module.exports = Login;
