@@ -25,22 +25,18 @@ var Photos= React.createClass({
   
     render:function(){
         return(
-          /*this will rending photos on page2*/
+          /*this will render photos on page2*/
           <div>
             <div className="card">
-              <div className="card-image">
-                <img src="images/sample-1.jpg"></img>
-                
-              </div>
               <div className="card-content">
               <span className="card-title">Photo Gallery</span>
-                <Coverflow width="960" height="500" displayQuantityOfSide={1} navigation={false}>
-
+                <Coverflow width="960" height="500" 
+                displayQuantityOfSide={1} 
+                navigation={false} 
+                clickable={false}>
                 {
-                  this.state.photos.map((url, index) =>  {
-                    
+                  this.state.photos.map((url, index) =>  { 
                    return (
-
                     //<li key={url.toString()}> </li>
                       <img key={index} className="locationPics" src={url}/>    
                     );
@@ -48,10 +44,6 @@ var Photos= React.createClass({
                 }
                 </Coverflow>
               </div>
-              <div className="card-action">
-                <a href="#">This is a link</a>
-              </div>
-
             </div>
           </div>  
                  

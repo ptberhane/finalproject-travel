@@ -20,8 +20,13 @@ body{
  overflow: hidden;
  z-index: -99;
 }
-.page2{
-    margin-top: 50px;
+
+/*footer {
+    bottom: 0px;
+    margin-bottom: 0px;
+    right: 0px;
+    left: 0px;
+    position: fixed;
 
 }
 
@@ -85,6 +90,7 @@ nav {
     font-family: 'Arima Madurai', cursive;
     text-shadow: 2px 2px 2px #aaa;
     margin: 5px;
+    border-bottom: thick white;
 }
 .logo_image {
   margin-top:15px;

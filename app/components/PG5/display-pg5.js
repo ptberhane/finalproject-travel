@@ -4,7 +4,7 @@ class Display extends Component {
       super(props);
 
       this.state = {
-          videoURL: "./assets/Black_Keys.mp4"
+          videoURL: "./assets/Slow_Typer.mp4"
       }
   }
 

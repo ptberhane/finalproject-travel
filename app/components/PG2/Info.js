@@ -1,6 +1,8 @@
 var React = require("react");
 var infoHelper  = require("../utils/InfoApi_helpers.js");
 
+
+
 console.log('in info');
 
 var Info= React.createClass({
@@ -29,7 +31,7 @@ var Info= React.createClass({
                       <div className="card blue-grey darken-1">
                         <div className="card-content white-text">
                           <span className="card-title">Info: {this.state.name}</span>
-                          <p>{this.state.best_months_to_visit_text}</p>
+                          <li>{this.state.best_months_to_visit_text}</li>
                         </div>
                         <div className="card-action">
                           <a href="#">This is a link</a>
