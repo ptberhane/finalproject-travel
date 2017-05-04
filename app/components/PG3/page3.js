@@ -2,7 +2,7 @@ var React = require("react");
 var Navbar = require("../PG1/Navbar");
 var Newsfeed = require("./Newsfeed");
 var Panel = require("../PG1/Panel");
-
+var Display = require("./display-pg3");
 
 
 var Page3 = React.createClass({
@@ -13,11 +13,16 @@ var Page3 = React.createClass({
    return (
         <div className="page3">
         <Navbar />
-        
+       
+        <div>
           <Newsfeed/>
-
-        
+          <br></br>
         </div>
+        <div>
+        <Display/>
+        </div>
+        </div>
+
   );
 }
 });
