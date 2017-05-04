@@ -18,9 +18,10 @@ var Page2 = React.createClass({
               <Navbar />
               <Search />
             <div className= "col s12">
-        	   <Photos city={this.props.location.query.city}/>
+
+             <Photos city={this.props.location.query.city}/>
             </div>
-            <div className="col s4 offset-l2 s10">	
+            <div className="col s4 offset-l2 s10">  
               <Panel/>
             </div>
           </div>

@@ -20,6 +20,7 @@ var Page6 = React.createClass({
         <div className="col s8">
           <Login/>
         </div>
+
         <div>
         <Display />
         </div>
