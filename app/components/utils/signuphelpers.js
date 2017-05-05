@@ -1,4 +1,5 @@
-import axios from 'axios';
+var var axios = require ("axios");
+
 import {Router, Route, hashHistory, browserHistory} from 'react-router';
 
 

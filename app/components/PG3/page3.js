@@ -16,7 +16,7 @@ var Page3 = React.createClass({
        
         <div>
           <Newsfeed/>
-          <br></br>
+        
         </div>
         <div>
         <Display/>

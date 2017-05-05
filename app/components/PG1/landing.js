@@ -25,6 +25,7 @@ const styles = {
    top: 0,
    left: 0,
    zIndex: -99,
+    height:1200
  }
 
 module.exports= Landing;

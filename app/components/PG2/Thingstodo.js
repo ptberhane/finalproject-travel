@@ -30,17 +30,13 @@ var ThingsTodo = React.createClass({
                
                       <div className="card blue-grey darken-1">
                         <div className="card-content white-text">
-                          <span className="card-title">Things Todo</span>
-                          <p>Attractions</p>
-                        </div>
-                       {this.state.restaurants.map((a,i)=><div key={i}>
-                            <p>A NEW LOCATION EXISTS</p>
 
-                              </div>)}
-                        <div className="card-action">
 
-                          
+                          <span className="card-title">Things to do: {this.state.name}</span>
+                          <p>{this.state.something}</p>
                         </div>
+                       
+
                       </div>
                     
         )

@@ -28,25 +28,28 @@ var Eats = React.createClass({
         return(
                 /*this will be for info on page2*/
                
-                      <div className="card blue-grey darken-1">
+                      <div style={styles} className="card blue-grey darken-1">
                         <div className="card-content white-text">
                           <span className="card-title">Eats</span>
                           <p>Restaurants</p>
                         </div>
-                       {this.state.restaurants.map((r,i)=><div key={i}>
+                       {this.state.restaurants.map((r,i)=> <div key={i}>
                             <p> A NEW LOCATION EXISTS</p>
 
                               </div>)}
-                        <div className="card-action">
-
-                          
-                        </div>
+                       
                       </div>
                     
             )
     }
 
     });
+
+const styles = {
+  marginBottom: '200px'
+
+}
+
 
 
 module.exports= Eats;
