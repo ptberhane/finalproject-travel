@@ -1,51 +1,44 @@
-// Include the React library
-var React = require("react");
+ar React = require("react");
 
-// Include the react-router module
-var router = require("react-router");
-
-// Include the Route component for displaying individual routes
-var Route = router.Route;
-
-// Include the Router component to contain all our Routes
-// Here where we can pass in some configuration as props
-var Router = router.Router;
-
-// Include the hashHistory prop to handle routing client side without a server
-// https://github.com/ReactTraining/react-router/blob/master/docs/guides/Histories.md#hashhistory
-var hashHistory = router.hashHistory;
+var Search = require("./PG1/Search");
 
 
-// Include the IndexRoute (catch-all route)
-var IndexRoute = router.IndexRoute;
+var Main = React.createClass({
 
-// Reference the high-level components
-var Main = require("../components/MainPage");
+// Here we render the function
+ render: function() {
 
-var Page1 = require("../components/PG1/Page1");
-var Page2 = require("../components/PG2/Page2");
-var Page3 = require("../components/PG3/Page3");
-var Page4 = require("../components/PG4/Page4");
-var Page5 = require("../components/PG5/Page5");
+  return (
+     <div>
+     <div className="container">
 
-
-// Export the Routes
-module.exports = (
-
-  // The high level component is the Router component
-  <Router history={hashHistory}>
-    <Route path="/" component={Main}>
-
-      {/* If user selects Info or Chat show the appropriate component */}
-      <Route path="home" component={Page1} />
-      <Route path="Page2" component={Page2} />
-      <Route path="newsfeed" component={Page3} />
-      <Route path="Page4" component={Page4} />
-       <Route path="login" component={Page5} />
-      {/* If user selects any other path... we get the Info Route */}
+       {this.props.children}
+     </div>
      
-      <IndexRoute component={Page1}/>
-    </Route>
-  </Router>
+   {/*footer begins*/}
 
-);
+     <footer className="page-footer teal lighten-3">
+         <div className="container">
+           <div className="row">
+             <div className="col s6">
+
+               <h5 className="white-text"></h5>
+
+               <p className="grey-text text-lighten-4 center-align">"Travel expands the mind and fills the gap." Sheda Savage</p>
+             </div>
+             
+           </div>
+         </div>
+         <div className="footer-copyright">
+           <div className="container">
+           © 2017 Copyright Text
+           
+           </div>
+         </div>
+       </footer>
+       </div>
+   );
+ }
+});
+
+module.exports = Main;
