@@ -1,22 +1,24 @@
 var React = require("react");
-var helpers = require("../utils/thingstodohelper.js");
+var todoHelper = require("../utils/thingstodohelper.js");
+console.log("Thingstodo");
 
-var Thingstodo= React.createClass({
-      getInitialState() {
-    return {
-      name: ''
+var ThingsTodo= React.createClass({
+  getInitialState(){
+    return{
+      thingsTodo: []
     }
   },
   componentDidMount: function(){
-    console.log('componentdidmount');
-    console.log('this.props', this.props);
-    helpers.getCitydata(this.props.Thingstodo) 
-    .then(function(response){
-      console.log(response.data.name);
-    {/* CHECK THE THINGS TO DO FORMAT */}
-      this.setState({name: response.data.name, climateIndex: response.data.climate_index, best_months_to_visit_text: response.data.best_months_to_visit_text})
-    }.bind(this));
+    // console.log('Thingstodo.js file mounted');
+    console.log('Todo PROPSthis.props',this.props);
 
+    todoHelper.getTododata(this.props.city)
+    .then(function(response){
+      console.log("ThingsTodo RESPONSE", response);
+      // console.log(response.data);
+      this.setState({thingsTodo:response.data})
+      console.log(response);
+    }.bind(this));
 
   },
 
@@ -41,4 +43,4 @@ var Thingstodo= React.createClass({
     });
 
 
-module.exports= Thingstodo;
+module.exports= ThingsTodo;
