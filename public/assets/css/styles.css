@@ -21,7 +21,7 @@ body{
  z-index: -99;
 }
 
-/*footer {
+footer {
     bottom: 0px;
     margin-bottom: 0px;
     right: 0px;
@@ -31,7 +31,6 @@ body{
 }
 
 .iframe video {
- /* Make video to at least 100% wide and tall */
  min-width: 100%;
  min-height: 100%;
  margin-bottom: 100px;
@@ -51,6 +50,9 @@ margin-top:100px;
  min-width: 200%;
  min-height: 100%;
 
+}
+.text{
+  float:center;
 }
 
 #slideout {
@@ -107,3 +109,10 @@ nav {
     position: fixed;
 }
 
+/*.row .col.m6 {
+    width: 135%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+    height: 70%;
+}*/

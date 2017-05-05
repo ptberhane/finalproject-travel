@@ -4,7 +4,7 @@ var React = require("react");
 
 
 
-var Search= React.createClass({
+var Search = React.createClass({
     getInitialState() {
       console.log('getting initial state');
       return {
@@ -17,8 +17,11 @@ var Search= React.createClass({
       });
       console.log('the input box is: ' + event.target.value);
     },
-    searchClick: function() {
+    searchClick() {
+      console.log(this)
+      console.log(this.state)
       //route to page2, with the search query
+      console.log("HELLO!");
       console.log(this.state.search);
 
       //go to page 2

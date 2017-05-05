@@ -1,52 +1,67 @@
 var React = require("react");
+var newsfeedHelper = require("../utils/newsfeed-helpers.js");
 
 var Newsfeed= React.createClass({
+  getInitialState(){
+    return{
+      newsfeed: []
+    }
+  },
+  componentDidMount: function(){
+    console.log("NEWSFEED CODE RUNNING!!");
+    //console.log(this.props);
+
+    newsfeedHelper.getNewsFeed()
+    .then(function(response){
+      //console.log("NewsFeed RESPONSE", response);
+      // console.log(response.data);
+      this.setState({newsfeed:response.data});
+
+      console.log(this.state.newsfeed);
+
+
+
+    }.bind(this));
+
+
+
+  },
+
 
     render:function(){
+
+
+      const newsfeedData = this.state.newsfeed;
+    const listItems = newsfeedData.map((entry) => 
+     
+        <li key={entry._id} className="collection-item avatar">
+            <img src={entry.image} alt="" className="circle"></img>
+            <span className="title"><a href={entry.link}>{entry.title}</a></span>
+            <p>{entry.post}</p>
+            <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
+        </li>
+
+      );
+
+
         return(
                 /*this will be newsfeed on page 3*/
-
+                <div style={styles}>
                 <ul className="collection" style={styles}>
-                    <li className="collection-item avatar">
-                      <img src="images/yuna.jpg" alt="" className="circle"></img>
-                      <span className="title">Title1</span>
-                      <p>First Line <br></br>
-                         Second Line
-                      </p>
-                      <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
-                    </li>
-                    <li className="collection-item avatar">
-                      <i className="material-icons circle">folder</i>
-                      <span className="title">Title2</span>
-                      <p>First Line <br></br>
-                         Second Line
-                      </p>
-                      <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
-                    </li>
-                    <li className="collection-item avatar">
-                      <i className="material-icons circle green">insert_chart</i>
-                      <span className="title">Title3</span>
-                      <p>First Line <br></br>
-                         Second Line
-                      </p>
-                      <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
-                    </li>
-                    <li className="collection-item avatar">
-                      <i className="material-icons circle red">play_arrow</i>
-                      <span className="title">Title4</span>
-                      <p>First Line <br></br>
-                         Second Line
-                      </p>
-                      <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
-                    </li>
-                  </ul>
+                    {listItems}
+                </ul>
+                </div>
+
+
             )
-    }
+      }
+    
 
     });
 
 const styles = {
-  margin: '100px'
+  margin: '100px',
+ 
 }
 
 module.exports= Newsfeed;

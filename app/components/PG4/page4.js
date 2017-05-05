@@ -12,19 +12,21 @@ var Page4 = React.createClass({
 
    return (
         <div>
-
           <Navbar />
           <div className="row">
+          <Profile/>
           <div className="col s4 offset-l2 s10">
           <Panel />
           <div className="col s8">
-          <Profile/>
+          
           </div>
           </div>
           </div>
+          <div className="row">
 	      <UserMap />
-        
-        </div>
+          </div>
+          </div>
+  
   );
 }
 });

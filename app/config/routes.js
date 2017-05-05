@@ -40,7 +40,7 @@ module.exports = (
       <Route path="home" component={Page1} />
       <Route path="Page2" component={Page2} />
       <Route path="newsfeed" component={Page3} />
-      <Route path="Page4" component={Page4} />
+      <Route path="user-profile" component={Page4} />
       <Route path="signup" component={Page5} />
       <Route path="login" component={Page6} />
       {/* If user selects any other path... we get the Page1 Route */}
