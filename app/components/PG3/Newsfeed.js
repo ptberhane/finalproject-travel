@@ -61,7 +61,9 @@ var Newsfeed= React.createClass({
 
 const styles = {
  
-  marginBottom:'300px',
+  marginBottom:'250px',
+ 
+
  
 }
 
