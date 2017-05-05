@@ -1,29 +1,69 @@
 var React = require("react");
+var newsfeedHelper = require("../utils/newsfeed-helpers.js");
 
 var Newsfeed= React.createClass({
+  getInitialState(){
+    return{
+      newsfeed: []
+    }
+  },
+  componentDidMount: function(){
+    console.log("NEWSFEED CODE RUNNING!!");
+    //console.log(this.props);
+
+    newsfeedHelper.getNewsFeed()
+    .then(function(response){
+      //console.log("NewsFeed RESPONSE", response);
+      // console.log(response.data);
+      this.setState({newsfeed:response.data});
+
+      console.log(this.state.newsfeed);
+
+
+
+    }.bind(this));
+
+
+
+  },
+
 
     render:function(){
+
+
+      const newsfeedData = this.state.newsfeed;
+    const listItems = newsfeedData.map((entry) => 
+     
+        <li key={entry._id} className="collection-item avatar">
+            <img src={entry.image} alt="" className="circle"></img>
+            <span className="title"><a href={entry.link}>{entry.title}</a></span>
+            <p>{entry.post}</p>
+            <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
+        </li>
+
+      );
+
+
         return(
                 /*this will be newsfeed on page 3*/
+    
+                <div style={styles}>
+                <ul className="collection" >
+                    {listItems}
+                </ul>
+                </div>
 
-                <ul className="collection" style={styles}>
-                    <li className="collection-item avatar">
-                      <img src="images/yuna.jpg" alt="" className="circle"></img>
-                      <span className="title">Title1</span>
-                      <p>First Line <br></br>
-                         Second Line
-                      </p>
-                      <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
-                    </li>
-                    
-                  </ul>
+
             )
-    }
+      }
+    
 
     });
 
 const styles = {
-  margin: '100px'
+ 
+  marginBottom:'300px',
+ 
 }
 
 module.exports= Newsfeed;

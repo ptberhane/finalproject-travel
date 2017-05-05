@@ -20,19 +20,22 @@ body{
  overflow: hidden;
  z-index: -99;
 }
-
-/*footer {
+a{
+    color:white;
+}
+footer {
     bottom: 0px;
     margin-bottom: 0px;
     right: 0px;
     left: 0px;
     position: fixed;
+    font-family: 'Pacifico', cursive;
+    text-align:center;
 
 }*/
 
 
 .iframe video {
- /* Make video to at least 100% wide and tall */
  min-width: 100%;
  min-height: 100%;
  margin-bottom: 100px;
@@ -52,6 +55,9 @@ margin-top:100px;
  min-width: 200%;
  min-height: 100%;
 
+}
+.text{
+  float:center;
 }
 
 #slideout {

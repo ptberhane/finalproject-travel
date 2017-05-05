@@ -3,10 +3,11 @@ var React = require("react");
 var Panel = require("../PG1/Panel");
 var Info = require("./Info");
 var Photos = require("./Photos");
-var Tours = require("./Tours");
+var Eats = require("./Eats");
 var Thingstodo = require("./Thingstodo");
 var Navbar = require("../PG1/Navbar");
 var Search = require("../PG1/Search");
+var Display = require("./display-pg2");
 
 var Page2 = React.createClass({
 
@@ -30,12 +31,14 @@ var Page2 = React.createClass({
               <Info city={this.props.location.query.city} />
             </div>
           <div className="col s4">
-            <Tours/>
+            <Eats city={this.props.location.query.city}/>
           </div>
           <div className="col s4">
-            <Thingstodo />
+            <Thingstodo city={this.props.location.query.city}/>
           </div>
+          <Display />
         </div>
+
       </div>
         
         

@@ -28,21 +28,23 @@ var Info= React.createClass({
         return(
                 /*this will be for info on page2*/
                 
-                      <div className="card blue-grey darken-1">
+                      <div style={styles} className="card blue-grey darken-1">
                         <div className="card-content white-text">
-                          <span className="card-title">Info: {this.state.name}</span>
-                          <li>{this.state.best_months_to_visit_text}</li>
+                          <span className="card-title">Information: {this.state.name}</span>
+                          <p>{this.state.best_months_to_visit_text}</p>
                         </div>
-                        <div className="card-action">
-                          <a href="#">This is a link</a>
                       
-                        </div>
                       </div>
                    
             )
     }
 
     });
+
+const styles = {
+  marginBottom: '200px'
+
+}
 
 
 module.exports= Info;
