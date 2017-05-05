@@ -1,10 +1,26 @@
 var React = require("react");
+var todoHelper = require("../utils/thingstodohelper.js");
+console.log("Thingstodo");
 
-// var helpers = require("../utils/thingstodohelper.js");
+var ThingsTodo= React.createClass({
+  getInitialState(){
+    return{
+      thingsTodo: []
+    }
+  },
+  componentDidMount: function(){
+    // console.log('Thingstodo.js file mounted');
+    console.log('Todo PROPSthis.props',this.props);
 
-var Thingstodo= React.createClass({
+    todoHelper.getTododata(this.props.city)
+    .then(function(response){
+      console.log("ThingsTodo RESPONSE", response);
+      // console.log(response.data);
+      this.setState({thingsTodo:response.data})
+      console.log(response);
+    }.bind(this));
 
-
+  },
 
     render:function(){
         return(
@@ -12,13 +28,10 @@ var Thingstodo= React.createClass({
                
                       <div className="card blue-grey darken-1">
                         <div className="card-content white-text">
-                          <span className="card-title">Thingstodo: </span>
-                         
+                          <span className="card-title">Things to do: {this.state.name}</span>
+                          <p>{this.state.something}</p>
                         </div>
-                        <div className="card-action">
-                          <a href="#">This is a link</a>
-                          
-                        </div>
+                       
                       </div>
                    
             )

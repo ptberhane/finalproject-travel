@@ -20,13 +20,17 @@ body{
  overflow: hidden;
  z-index: -99;
 }
-
+a{
+    color:white;
+}
 footer {
     bottom: 0px;
     margin-bottom: 0px;
     right: 0px;
     left: 0px;
     position: fixed;
+    font-family: 'Pacifico', cursive;
+    text-align:center;
 
 }
 
@@ -109,10 +113,3 @@ nav {
     position: fixed;
 }
 
-/*.row .col.m6 {
-    width: 135%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
-    height: 70%;
-}*/

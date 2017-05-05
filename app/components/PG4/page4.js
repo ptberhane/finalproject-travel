@@ -4,7 +4,7 @@ var Profile= require("./user-profile");
 var Panel = require("../PG1/Panel");
 var UserMap = require("./userMap");
 var Navbar = require("../PG1/Navbar");
-
+var Display = require("./display-pg4");
 var Page4 = React.createClass({
 
  // Here we render the function
@@ -25,6 +25,7 @@ var Page4 = React.createClass({
           <div className="row">
 	      <UserMap />
           </div>
+          <Display />
           </div>
   
   );

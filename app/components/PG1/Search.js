@@ -48,7 +48,8 @@ var Search = React.createClass({
                 
 const styles1 = {
   margin: '15px',
-  color: 'white'
+  color: 'white',
+  fontSize:"25px"
 
 }
 const styles2 = {

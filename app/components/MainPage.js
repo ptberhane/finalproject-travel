@@ -21,11 +21,12 @@ var Main = React.createClass({
       <footer className="page-footer teal lighten-3">
           <div className="container">
             <div className="row">
-              <div className="col s6">
+              <div className="col s12">
 
-                <h5 className="white-text"></h5>
+                <h5 className="white-text "></h5>
 
-                <p className="grey-text text-lighten-4 center-align">"Travel expands the mind and fills the gap." Sheda Savage</p>
+                <p style={style} className="grey-text text-lighten-4 text-center">"Travel expands the mind and fills the gap." Sheda Savage</p>
+               
               </div>
               
             </div>
@@ -41,6 +42,14 @@ var Main = React.createClass({
     );
   }
 });
+
+const style={
+  fontSize:"20px",
+}
+
+const style1={
+  fontSize:"20px",
+}
 
 module.exports = Main;
 

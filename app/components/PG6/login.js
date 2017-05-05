@@ -29,7 +29,7 @@ var Login= React.createClass({
         		<div className="col s10" style={styles1}>
         				 Not registered? Sign up:
           		<div  className="input-field inline">
-           <button  className="btn waves-effect waves-light" type="submit" name="action"> <a href='#/signup'>Signup</a>
+           <button className="btn waves-effect waves-light" type="submit" name="action"> <a href='#/signup'>Signup</a>
                     <i className="material-icons right">mode_edit</i>
   				</button> 
           </div>
@@ -40,6 +40,7 @@ var Login= React.createClass({
             );
     	}
     });
+
 
 const styles = {
     	background: '#eceff1',

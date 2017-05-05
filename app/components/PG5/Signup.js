@@ -1,5 +1,5 @@
 var React = require("react");
-var signupHelper = require("../utils/signuphelpers.js");
+// var signupHelper = require("../utils/signuphelpers.js");
 
 var Signup= React.createClass({
 

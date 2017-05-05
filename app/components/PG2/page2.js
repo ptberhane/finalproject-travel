@@ -7,6 +7,7 @@ var Eats = require("./Eats");
 var Thingstodo = require("./Thingstodo");
 var Navbar = require("../PG1/Navbar");
 var Search = require("../PG1/Search");
+var Display = require("./display-pg2");
 
 var Page2 = React.createClass({
 
@@ -34,7 +35,9 @@ var Page2 = React.createClass({
           <div className="col s4">
             <Thingstodo city={this.props.location.query.city}/>
           </div>
+          <Display />
         </div>
+
       </div>
         
         

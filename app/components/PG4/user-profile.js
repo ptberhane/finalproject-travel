@@ -16,7 +16,7 @@ var Profile= React.createClass({
           <p>I am a very simple card. I am good at containing small bits of information.</p>
         </div>
         <div className="card-action">
-           <button className="btn waves-effect waves-light" type="submit" name="action">Write a blog
+           <button className="btn waves-effect waves-light" type="submit" name="action"><a href="#/userblog">Write a blog</a>
            <i className="material-icons right">mode_edit</i>
          </button>
            </div>

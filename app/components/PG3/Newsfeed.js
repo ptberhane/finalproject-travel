@@ -46,12 +46,12 @@ var Newsfeed= React.createClass({
 
         return(
                 /*this will be newsfeed on page 3*/
+    
                 <div style={styles}>
-                <ul className="collection" style={styles}>
+                <ul className="collection" >
                     {listItems}
                 </ul>
                 </div>
-
 
             )
       }
@@ -60,7 +60,8 @@ var Newsfeed= React.createClass({
     });
 
 const styles = {
-  margin: '100px',
+ 
+  marginBottom:'300px',
  
 }
 
