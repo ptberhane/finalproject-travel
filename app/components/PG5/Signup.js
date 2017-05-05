@@ -1,5 +1,5 @@
 var React = require("react");
-var signupHelper = require("../utils/signuphelpers.js");
+// var signupHelper = require("../utils/signuphelpers.js");
 
 var Signup= React.createClass({
 
@@ -33,7 +33,7 @@ var Signup= React.createClass({
 		        </div>
 		      </div> 
 		      <div className="input-field col s4">
-		       <button className="btn waves-effect waves-light" type="submit" name="action">Sign up
+		       <button className="btn waves-effect waves-light" type="submit" name="action"><a href="#/login">Sign up</a>
     			<i className="material-icons right">send</i>
   				</button>
     		</div> 

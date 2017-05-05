@@ -24,7 +24,8 @@ const styles = {
   position: 'absolute',
   top: 0,
   left: 0,
-  zIndex: -99
+  zIndex: -99,
+  height:1200
 }
 
 

@@ -26,10 +26,8 @@ var Photos= React.createClass({
     render:function(){
         return(
           /*this will render photos on page2*/
-          <div>
-            <div className="card">
-              <div className="card-content">
-              <span className="card-title">Photo Gallery</span>
+          <div >
+             
                 <Coverflow width="960" height="500" 
                 displayQuantityOfSide={1} 
                 navigation={false} 
@@ -44,8 +42,7 @@ var Photos= React.createClass({
                 }
                 </Coverflow>
               </div>
-            </div>
-          </div>  
+        
                  
         );
       }
