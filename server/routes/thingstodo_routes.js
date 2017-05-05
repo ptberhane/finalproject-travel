@@ -13,17 +13,14 @@ const getData = axiosRes => axiosRes.data;
 
 const getVenues = axiosObj => axiosObj.response.venues;
 
-//create a function to parse the data response 
-//const parseBody = 
-
 app.get("/todo/:city/:venue", function(req, res) {
   console.log('TODO');
 
 //Send the request and sresponse to the server
 const sendJson = dataToSend=> res.json(dataToSend);
 
-//Create a function using Geocoder to convert city to latitud and longitud
-
+  //Create a function using Geocoder to convert any search location to latitud and longitud
+  
   // Geocoding 
   geocoder.geocode(req.params.city, function ( err, data ) {
     
@@ -33,23 +30,27 @@ const sendJson = dataToSend=> res.json(dataToSend);
         //console log the lat & lng
         console.log(latitude, longitude);
 
+    //Set default venue_type to 2/restaurants
     var venue_type = 2
-
+    
+    //If the search location includes restaurants then venue_type is equal to 2
     if (req.params.venue === 'restaurants'){
        venue_type = 2
+
+       //else if the search location includes attractions then venue_type is equal to 3
        } else if (req.params.venue === 'attractions') {
           venue_type = 3    
-          }
-           
+          };
+
+    // set a queryurl to call the Tripexpert data     
     let searchURL = `https://api.tripexpert.com/v1/venues?order_by=distance&venue_type_id=${venue_type}&latitude=${latitude}&longitude=${longitude}&api_key=8bed1c3e068b84f0388ec817dd255fd4`
      
+     //get axios call
      axios.get(searchURL)
       .then(getData)
       .then(getVenues)
       .then(sendJson)
       .then(console.log)
-
-
 
     //request and response
       request(searchURL, function(error, response, body) {
@@ -57,25 +58,7 @@ const sendJson = dataToSend=> res.json(dataToSend);
         res.json(JSON.parse(body));
       });
 
-
-
   });
-   
-    //https://api.tripexpert.com/v1/categories?8bed1c3e068b84f0388ec817dd255fd4    
-    // let url = "https://api.tripexpert.com/v1/categories?";
-    // let api_key = "8bed1c3e068b84f0388ec817dd255fd4";
-    // let searchLocation = req.params.city;
-    // let queryURL = url + "api_key=" + api_key + "venue_type_id=2" + "venue_type_id=2";
-
-  //Create the axios conection 
-    // axios.get(searchURL)
-    //     .then(getData)
-    //     .then(next => {
-    //         console.log('~~~~~~~~THINGSTODO!!!~~~~~~~~~~~~~~~~~~');
-            
-    //     });
-
-
     
 
 });
