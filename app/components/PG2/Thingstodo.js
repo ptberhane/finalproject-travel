@@ -23,26 +23,42 @@ var ThingsTodo = React.createClass({
 
   },
 
-  render(){
+
+  render: function () {
+
       console.log("this", this);
+
+      const attractionsData = this.state.attractions;
+      //console.log("THIS IS THE RESPONSE");
+      console.log(attractionsData);
+      const listItems = attractionsData.map((entry) =>
+        
+         
+            <p key={entry.id}> Location Name: {entry.name}</p> 
+    
+
+      );
+       
         return(
                 /*this will be for info on page2*/
                
-                      <div className="card blue-grey darken-1">
-                        <div className="card-content white-text">
-
-
-                          <span className="card-title">Things to do: {this.state.name}</span>
-                          <p>{this.state.something}</p>
-                        </div>
-                       
-
-                      </div>
-                    
+                <div style={styles} className="card blue-grey darken-1">
+                    <div className="card-content white-text">
+                          <span className="card-title">Things Todo</span>
+                          <p>Attractions</p>
+                    </div>
+                              {listItems}
+                    </div>
+                               
         )
   }
 
-    });
+});
+
+const styles = {
+  marginBottom: '200px'
+
+}
 
 
 module.exports= ThingsTodo;
