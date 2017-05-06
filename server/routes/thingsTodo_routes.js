@@ -13,6 +13,8 @@ const getData = axiosRes => axiosRes.data;
 
 const getVenues = axiosObj => axiosObj.response.venues;
 
+const limitedArray = string => string.slice(0, 6);
+
 app.get("/todo/:city/", function(req, res) {
   console.log('TODO');
 
@@ -33,19 +35,14 @@ const sendJson = dataToSend=> res.json(dataToSend);
     var venue_type = 2
 
     // set a queryurl to call the Tripexpert data     
-    let searchURL = `https://api.tripexpert.com/v1/venues?order_by=distance&venue_type_id=${venue_type}&latitude=${latitude}&longitude=${longitude}&api_key=8bed1c3e068b84f0388ec817dd255fd4`
+    let searchURL = `https://api.tripexpert.com/v1/venues?&order_by=distance&venue_type_id=${venue_type}&latitude=${latitude}&longitude=${longitude}&api_key=8bed1c3e068b84f0388ec817dd255fd4`
      
      //get axios call
      axios.get(searchURL)
       .then(getData)
       .then(getVenues)
+      .then(limitedArray)
       .then(sendJson)
-
-    //request and response
-      // request(searchURL, function(error, response, body) {
-      //   // console.log("body", JSON.parse(body));
-      //   res.json(JSON.parse(body));
-      // });
 
   });
     
@@ -90,13 +87,10 @@ const sendJson = dataToSend=> res.json(dataToSend);
      axios.get(searchURL)
       .then(getData)
       .then(getVenues)
+      .then(limitedArray)
       .then(sendJson)
 
-    //request and response
-      // request(searchURL, function(error, response, body) {
-      //   // console.log("body", JSON.parse(body));
-      //   res.json(JSON.parse(body));
-      // });
+    
 
   });
     
