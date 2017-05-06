@@ -18,7 +18,7 @@ var Main = React.createClass({
       
     {/*footer begins*/}
 
-      <footer className="page-footer teal lighten-3">
+      <footer className="page-footer teal lighten-2">
      
             <div className="row">
               <div className="col s12">

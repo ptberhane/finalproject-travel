@@ -14,16 +14,16 @@ var Page4 = React.createClass({
         <div>
           <Navbar />
           <div className="row">
-          <Profile/>
+            <Profile/>
           <div className="col s4 offset-l2 s10">
-          <Panel />
+            <Panel />
           <div className="col s8">
           
           </div>
           </div>
           </div>
           <div className="row">
-	      <UserMap />
+	         <UserMap />
           </div>
           <Display />
           </div>
