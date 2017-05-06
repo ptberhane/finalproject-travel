@@ -18,8 +18,8 @@ var Main = React.createClass({
       
     {/*footer begins*/}
 
-      <footer className="page-footer teal lighten-3">
-          <div className="container">
+      <footer className="page-footer teal lighten-2">
+     
             <div className="row">
               <div className="col s12">
 
@@ -30,7 +30,7 @@ var Main = React.createClass({
               </div>
               
             </div>
-          </div>
+   
           <div className="footer-copyright">
             <div className="container">
             © 2017 Copyright Text

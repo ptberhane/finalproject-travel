@@ -11,16 +11,14 @@ var Page3 = React.createClass({
   render: function() {
 
    return (
-        <div className="page3">
-        <Navbar />
-       
-        <div>
-          <Newsfeed/>
-        
-        </div>
-        <div>
-        <Display/>
-        </div>
+        <div className="row">
+          <Navbar />
+          <div className="col s12 offset-l1">
+            <Newsfeed/>
+          </div>
+          <div>
+            <Display/>
+          </div>
         </div>
 
   );

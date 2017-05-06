@@ -32,7 +32,8 @@ footer {
     font-family: 'Pacifico', cursive;
     text-align:center;
 
-}
+}*/
+
 
 .iframe video {
  min-width: 100%;
@@ -70,7 +71,6 @@ margin-top:100px;
     border-radius: 0 5px 5px 0;
 }
 
-
 #slideout_inner {
     position: fixed;
     top: 70px;
@@ -84,6 +84,7 @@ margin-top:100px;
     border-radius: 0 0 5px 0;
     margin-bottom: 6px;
 }
+
 
 #slideout:hover {
     right: 320px;

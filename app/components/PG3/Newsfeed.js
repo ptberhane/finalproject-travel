@@ -47,11 +47,12 @@ var Newsfeed= React.createClass({
         return(
                 /*this will be newsfeed on page 3*/
     
-                <div style={styles}>
+                <div >
                 <ul className="collection" >
                     {listItems}
                 </ul>
                 </div>
+
 
             )
       }
@@ -59,10 +60,6 @@ var Newsfeed= React.createClass({
 
     });
 
-const styles = {
- 
-  marginBottom:'300px',
- 
-}
+
 
 module.exports= Newsfeed;

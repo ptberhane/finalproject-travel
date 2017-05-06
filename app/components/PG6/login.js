@@ -13,10 +13,11 @@ var Login= React.createClass({
 			      <div className="row">
 			        <div className="input-field">
 			          <input id="username" type="text" className="validate" />
-			          <label for="username">Username</label>
+			          <label htmlFor="username">Username</label>
 			        </div>
 			        <div className="input-field">
 			          <input id="password" type="password" className="validate" />
+
 			          <label for="password">Password</label>
 			        </div>
 			      	<div className="input-field">
@@ -26,6 +27,7 @@ var Login= React.createClass({
 			      	</div>   
 		      	</div> 
 		      	<div className="row">
+
         		<div className="col s10" style={styles1}>
         				 Not registered? Sign up:
           		<div  className="input-field inline">
@@ -52,7 +54,7 @@ const styles = {
     }
 
 const styles1 = {
-	fontSize: '18px'
+	fontSize: '15px'
 }
     
 module.exports = Login;

@@ -4,9 +4,9 @@ var Navbar= React.createClass({
 
 	render:function(){
 		return(
-			<div claaName ="row">
-				<nav className = "N/A transparent z-depth-0">
-					<div className="nav-wrapper ">
+			<div className ="row">
+				<nav className = "N/A teal transparent z-depth-0" style ={styless}>
+					<div className="nav-wrapper">
 				        <a href="#/home"><img className="logo_image" src="../assets/logo.png" /></a>
 				        <a href="#/home" className="brand-logo" style={styles}>Vola</a>
 				        <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
@@ -25,6 +25,10 @@ var Navbar= React.createClass({
       );
   }
 });
+
+const styless= {
+	borderWidth: '5px',
+}
 
 const styles = {
     	fontSize: '40px',
