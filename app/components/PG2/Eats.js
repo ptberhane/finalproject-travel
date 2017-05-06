@@ -33,14 +33,14 @@ var Eats = React.createClass({
                           <span className="card-title">Eats</span>
                           <p>Restaurants</p>
                         </div>
-                       {this.state.restaurants.map((r,i)=> <div key={i}>
-                            <p> A NEW LOCATION EXISTS</p>
+                       {this.state.restaurants.map((r, i)=> <div key={i.id}>
+                            <p>Restaurants Name: {r.name}</p>
 
-                              </div>)}
+                        </div>)}
                        
                       </div>
                     
-            )
+        )
     }
 
     });
@@ -49,7 +49,6 @@ const styles = {
   marginBottom: '200px'
 
 }
-
 
 
 module.exports= Eats;
