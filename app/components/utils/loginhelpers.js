@@ -1,5 +1,5 @@
-import axios from 'axios';
-import {Router, Route, hashHistory, browserHistory} from 'react-router';
+var axios = require("axios");
+var {Router, Route, hashHistory, browserHistory} = require ("react-router");
 
 const loginHelper = {
 

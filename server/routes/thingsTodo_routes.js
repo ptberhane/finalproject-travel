@@ -4,7 +4,6 @@ var axios = require('axios')
 var path = require("path");
 var request = require("request");
 var geocoder = require('geocoder');
-
 // Initialize Express
 var app = express();
 

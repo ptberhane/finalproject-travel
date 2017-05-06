@@ -18,23 +18,27 @@ var Eats = React.createClass({
       console.log("ThingsTodo RESPONSE", response.data);
       // console.log(response.data);
       console.log(this);
-      this.setState({restaurants:response.data});
+      this.setState({restaurants:response.data.name,priceRange:response.data.price_category});
     });
 
   },
 
     render(){
       console.log("this", this);
+
+      console.log(name);
         return(
                 /*this will be for info on page2*/
                
                       <div style={styles} className="card blue-grey darken-1">
                         <div className="card-content white-text">
-                          <span className="card-title">Eats</span>
-                          <p>Restaurants</p>
-                        </div>
-                       {this.state.restaurants.map((r,i)=> <div key={i}>
-                            <p> A NEW LOCATION EXISTS</p>
+                          <span className="card-title">Eats:{this.state.restaurants.map((info,name) =>
+
+
+                              <p key={name} className="restaurantList" src={name}/>
+                            )}</span>
+      
+                       
 
                               </div>)}
                        
